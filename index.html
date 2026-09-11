@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>N4 Kanji — Bab 35–38</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600&display=swap');
+:root{
+ --bg:#f3f1ec;--paper:#faf9f6;--ink:#292824;--muted:#8b8880;
+ --line:#dedbd3;--accent:#3d5148;--accent2:#b8a58a;--soft:#e9e6de;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background-image:radial-gradient(#777 0.45px,transparent .45px);background-size:7px 7px}
+.wrap{position:relative;max-width:760px;margin:auto;padding:28px 18px 50px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:26px}
+.brand{display:flex;gap:13px;align-items:center}
+.logo{width:42px;height:42px;border:1px solid var(--line);background:var(--paper);border-radius:50%;display:grid;place-items:center;font-family:"Noto Serif JP",serif;font-size:21px}
+h1{font-family:"Noto Serif JP",serif;font-size:22px;font-weight:500;letter-spacing:.02em;margin:0}
+.sub{color:var(--muted);font-size:11px;letter-spacing:.08em;margin-top:5px}
+.btn{border:1px solid var(--line);background:rgba(250,249,246,.8);color:var(--ink);border-radius:999px;padding:9px 13px;font:inherit;font-size:12px;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-1px);border-color:#bbb6ac}
+.btn.dark{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tabs{display:flex;gap:6px;padding:5px;background:rgba(233,230,222,.7);border:1px solid var(--line);border-radius:15px;margin-bottom:20px}
+.tabs button{flex:1;border:0;background:transparent;color:var(--muted);border-radius:11px;padding:10px 7px;font:inherit;font-size:12px;cursor:pointer}
+.tabs button.active{background:var(--paper);color:var(--ink);box-shadow:0 2px 8px #00000008}
+.panel{display:none}.panel.active{display:block}
+.progress{font-size:11px;color:var(--muted);letter-spacing:.05em;margin:0 3px 10px}
+.card{position:relative;min-height:385px;background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:38px 25px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;cursor:pointer;box-shadow:0 12px 35px #504b3f0b;overflow:hidden}
+.card:before{content:"";position:absolute;top:0;left:15%;right:15%;height:1px;background:var(--accent2);opacity:.7}
+.lesson{font-size:10px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase;margin-bottom:26px}
+.kanji{font-family:"Noto Serif JP",serif;font-size:96px;font-weight:400;line-height:1}
+.kana{font-family:"Noto Serif JP",serif;font-size:20px;margin-top:19px}
+.meaning{font-size:15px;margin-top:7px;color:#55524c}
+.hint{font-size:10px;color:#aaa69d;margin-top:30px;letter-spacing:.04em}
+.actions{display:flex;justify-content:center;gap:7px;margin:13px 0}
+.actions .btn{min-width:108px}
+.search{width:100%;padding:13px 15px;background:var(--paper);border:1px solid var(--line);border-radius:13px;font:inherit;font-size:13px;outline:none;margin-bottom:10px}
+.search:focus{border-color:#aaa49a}
+.table{background:var(--paper);border:1px solid var(--line);border-radius:17px;overflow:hidden}
+.row{display:grid;grid-template-columns:62px 85px 1fr 1.25fr;gap:8px;padding:11px 13px;border-bottom:1px solid #e8e5de;align-items:center;font-size:12px}
+.row:last-child{border:0}.head{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:#f4f2ed}
+.k{font-family:"Noto Serif JP",serif;font-size:23px}
+.quizbox{background:var(--paper);border:1px solid var(--line);border-radius:23px;padding:25px}
+.qtop{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;letter-spacing:.08em}
+.qkanji{font-family:"Noto Serif JP",serif;font-size:74px;text-align:center;margin:25px 0 5px}
+.small{font-size:11px;color:var(--muted)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
+.opts button{padding:13px 12px;border:1px solid var(--line);background:#fffdf9;color:var(--ink);border-radius:12px;cursor:pointer;text-align:left;font:inherit;font-size:12px;transition:.15s}
+.opts button:hover{background:var(--soft)}
+.result{text-align:center;margin-top:15px;font-size:12px;min-height:17px}
+.score{text-align:center;color:var(--muted);font-size:10px;letter-spacing:.08em}
+@media(max-width:560px){
+ .wrap{padding:22px 13px 42px}.top{margin-bottom:20px}
+ .card{min-height:350px}.kanji{font-size:78px}
+ .row{grid-template-columns:48px 67px 1fr}.row .meaning{grid-column:3}
+ .opts{grid-template-columns:1fr}.actions .btn{min-width:auto;padding:9px 11px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">
+      <div class="logo">日</div>
+      <div><h1>N4 Kanji · Bab 35–38</h1><div class="sub">MINNA NO NIHONGO II · STUDY DECK</div></div>
+    </div>
+    <button class="btn" onclick="resetAll()">reset</button>
+  </div>
+
+  <div class="tabs">
+    <button class="active" onclick="tab('cards',this)">flashcards</button>
+    <button onclick="tab('list',this)">kotoba</button>
+    <button onclick="tab('quiz',this)">quiz</button>
+  </div>
+
+  <section id="cards" class="panel active">
+    <div class="progress" id="progress"></div>
+    <div class="card" onclick="flip()">
+      <div class="lesson" id="clesson"></div>
+      <div class="kanji" id="ckanji">漢字</div>
+      <div class="kana" id="ckana"></div>
+      <div class="meaning" id="cmeaning"></div>
+      <div class="hint" id="hint">Ketuk kartu untuk membalik</div>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="prev(event)">← Sebelumnya</button>
+      <button class="btn" onclick="shuffle(event)">🔀 Acak</button>
+      <button class="btn dark" onclick="known(event)">✓ Hafal</button>
+    </div>
+  </section>
+
+  <section id="list" class="panel">
+    <input id="search" class="search" placeholder="Cari kanji / reading / arti…" oninput="renderList()">
+    <div id="listbox" class="table"></div>
+  </section>
+
+  <section id="quiz" class="panel">
+    <div class="quizbox">
+      <div class="score" id="score"></div>
+      <div class="small">Pilih arti yang paling tepat:</div>
+      <div class="qkanji" id="qkanji"></div>
+      <div class="small" style="text-align:center" id="qkana"></div>
+      <div class="opts" id="opts"></div>
+      <div class="result" id="result"></div>
+      <div class="actions"><button class="btn dark" onclick="newQuiz()">🔁 Soal berikutnya</button></div>
+    </div>
+  </section>
+</div>
+  <div style="text-align:center;color:#aaa69d;font-size:9px;letter-spacing:.14em;margin-top:30px">学び続ける · KEEP LEARNING</div>
+
+<script>
+const data = [
+/* 35 */
+["35","咲きます","さきます","mekar / berbunga"],["35","変わります","かわります","berubah"],["35","困ります","こまります","mengalami kesulitan / bingung"],["35","付けます","つけます","memberi tanda / menandai"],["35","拾います","ひろいます","memungut"],["35","かかります","かかります","tersambung (telepon)"],["35","楽（な）","らく（な）","nyaman / mudah"],["35","正しい","ただしい","benar / tepat"],["35","珍しい","めずらしい","langka / tidak biasa"],["35","方","かた","orang (bentuk hormat)"],["35","向こう","むこう","seberang / sebelah sana"],["35","島","しま","pulau"],["35","村","むら","desa"],["35","港","みなと","pelabuhan"],["35","近所","きんじょ","lingkungan sekitar"],["35","屋上","おくじょう","atap / rooftop"],["35","海外","かいがい","luar negeri"],["35","山登り","やまのぼり","mendaki gunung"],["35","ハイキング","ハイキング","hiking"],["35","機会","きかい","kesempatan"],["35","許可","きょか","izin"],["35","丸","まる","lingkaran"],["35","操作","そうさ","pengoperasian"],["35","方法","ほうほう","cara / metode"],["35","設備","せつび","fasilitas / perlengkapan"],["35","カーテン","カーテン","tirai"],["35","ひも","ひも","tali"],["35","蓋","ふた","tutup"],["35","葉","は","daun"],["35","曲","きょく","karya musik / lagu"],["35","楽しみ","たのしみ","kesenangan / hal yang ditunggu"],["35","もっと","もっと","lebih / lebih banyak"],["35","初めに","はじめに","pertama-tama"],["35","終わります","おわります","selesai / berakhir"],["35","それなら","それなら","kalau begitu"],["35","夜行バス","やこうバス","bus malam"],["35","旅行社","りょこうしゃ","agen perjalanan"],["35","詳しい","くわしい","detail / mengetahui dengan baik"],["35","スキー場","スキーじょう","resor ski"],["35","交わります","まじわります","bergaul"],["35","諺","ことわざ","peribahasa"],["35","仲良くします","なかよくします","bergaul akrab"],["35","必要（な）","ひつよう（な）","perlu / penting"],
+/*36*/
+["36","届きます","とどきます","sampai / terkirim"],["36","出ます","でます","ikut / berpartisipasi"],["36","打ちます","うちます","mengetik"],["36","貯金します","ちょきんします","menabung"],["36","太ります","ふとります","bertambah gemuk / berat badan naik"],["36","やせます","やせます","menjadi kurus / berat badan turun"],["36","過ぎます","すぎます","melewati / berlalu"],["36","慣れます","なれます","terbiasa"],["36","硬い","かたい","keras"],["36","軟らかい","やわらかい","lunak / lembut"],["36","電子～","でんし～","elektronik ~"],["36","携帯～","けいたい～","portable / seluler ~"],["36","工場","こうじょう","pabrik"],["36","健康","けんこう","kesehatan"],["36","剣道","けんどう","kendo"],["36","柔道","じゅうどう","judo"],["36","宇宙","うちゅう","angkasa / alam semesta"],["36","毎週","まいしゅう","setiap minggu"],["36","毎月","まいつき","setiap bulan"],["36","毎年","まいとし","setiap tahun"],["36","必ず","かならず","pasti / tanpa gagal"],["36","絶対に","ぜったいに","mutlak / pasti"],["36","上手に","じょうずに","dengan baik / terampil"],["36","やっと","やっと","akhirnya"],["36","かなり","かなり","cukup / lumayan"],["36","無理な","むりな","mustahil / berlebihan"],["36","電源","でんげん","sumber listrik / power"],["36","健康","けんこう","kesehatan"],
+/*37*/
+["37","褒めます","ほめます","memuji"],["37","叱ります","しかります","memarahi"],["37","誘います","さそいます","mengajak / mengundang"],["37","起こします","おこします","membangunkan"],["37","招待します","しょうたいします","mengundang"],["37","頼みます","たのみます","meminta"],["37","注意します","ちゅういします","memperingatkan / menasihati"],["37","盗ります","とります","mencuri / merampok"],["37","踏みます","ふみます","menginjak"],["37","壊します","こわします","merusakkan"],["37","汚します","よごします","mengotori"],["37","行います","おこないます","melaksanakan"],["37","輸出します","ゆしゅつします","mengekspor"],["37","輸入します","ゆにゅうします","mengimpor"],["37","翻訳します","ほんやくします","menerjemahkan"],["37","発明します","はつめいします","menemukan / menciptakan (invensi)"],["37","発見します","はっけんします","menemukan"],["37","設計します","せっけいします","merancang"],["37","米","こめ","beras"],["37","麦","むぎ","gandum / jelai"],["37","石油","せきゆ","minyak bumi"],["37","原料","げんりょう","bahan baku"],["37","泥棒","どろぼう","pencuri"],["37","警官","けいかん","polisi"],["37","建築家","けんちくか","arsitek"],["37","科学者","かがくしゃ","ilmuwan"],["37","漫画","まんが","komik"],["37","世界中","せかいじゅう","seluruh dunia"],["37","技術","ぎじゅつ","teknologi / teknik"],["37","土地","とち","tanah / lahan"],["37","騒音","そうおん","kebisingan"],["37","利用します","りようします","menggunakan"],["37","アクセス","アクセス","akses"],["37","～世紀","～せいき","abad ke-~"],["37","豪華（な）","ごうか（な）","mewah"],["37","彫刻","ちょうこく","ukiran / patung"],["37","眠ります","ねむります","tidur"],["37","彫ります","ほります","mengukir"],["37","仲間","なかま","teman / rekan"],
+/*38*/
+["38","参加します","さんかします","ikut / berpartisipasi"],["38","育てます","そだてます","membesarkan / memelihara"],["38","運びます","はこびます","membawa / mengangkut"],["38","亡くなります","なくなります","meninggal dunia"],["38","入院します","にゅういんします","masuk rumah sakit"],["38","退院します","たいいんします","keluar dari rumah sakit"],["38","入れます","いれます","menyalakan (daya)"],["38","切ります","きります","mematikan (daya)"],["38","掛けます","かけます","mengunci"],["38","気持ちがいい","きもちがいい","terasa nyaman / menyenangkan"],["38","気持ちが悪い","きもちがわるい","terasa tidak enak"],["38","大きな～","おおきな～","~ yang besar"],["38","小さな～","ちいさな～","~ yang kecil"],["38","赤ちゃん","あかちゃん","bayi"],["38","小学校","しょうがっこう","sekolah dasar"],["38","中学校","ちゅうがっこう","sekolah menengah pertama"],["38","高校","こうこう","SMA"],["38","大学","だいがく","universitas"],["38","入学します","にゅうがくします","masuk sekolah / kuliah"],["38","卒業します","そつぎょうします","lulus"],["38","両親","りょうしん","orang tua"],["38","将来","しょうらい","masa depan"],["38","調査","ちょうさ","penyelidikan / survei"],["38","研究","けんきゅう","penelitian"],["38","発表","はっぴょう","presentasi / pengumuman"],["38","資料","しりょう","bahan / materi"],["38","文法","ぶんぽう","tata bahasa"],["38","辞書","じしょ","kamus"],["38","意味","いみ","arti / makna"],["38","生活","せいかつ","kehidupan / kehidupan sehari-hari"],["38","経験","けいけん","pengalaman"]
+];
+
+let order=[...Array(data.length).keys()], pos=0, flipped=false, score=0, answered=0;
+let knownSet=new Set(JSON.parse(localStorage.getItem("known35_38")||"[]"));
+
+function tab(id,el){document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));el.classList.add('active');if(id==='list')renderList();if(id==='quiz')newQuiz();}
+function current(){return data[order[pos]]}
+function show(){let d=current();document.getElementById('clesson').textContent='BAB '+d[0];document.getElementById('ckanji').textContent=flipped?d[1]:'漢字';document.getElementById('ckana').textContent=flipped?d[2]:'';document.getElementById('cmeaning').textContent=flipped?d[3]:'';document.getElementById('hint').textContent=flipped?'Ketuk lagi untuk melihat kanji depan':'Ketuk kartu untuk membalik';document.getElementById('progress').textContent=`Kartu ${pos+1} / ${data.length} · ✓ ${knownSet.size} hafal`;}
+function flip(){flipped=!flipped;show()}
+function next(e){if(e)e.stopPropagation();pos=(pos+1)%order.length;flipped=false;show()}
+function prev(e){if(e)e.stopPropagation();pos=(pos-1+order.length)%order.length;flipped=false;show()}
+function known(e){if(e)e.stopPropagation();knownSet.add(order[pos]);localStorage.setItem("known35_38",JSON.stringify([...knownSet]));next()}
+function shuffle(e){if(e)e.stopPropagation();order.sort(()=>Math.random()-.5);pos=0;flipped=false;show()}
+function renderList(){let q=document.getElementById('search').value.toLowerCase();let arr=data.map((d,i)=>[d,i]).filter(x=>x[0].join(' ').toLowerCase().includes(q));let h='<div class="row head"><div>Bab</div><div>Kanji</div><div>Reading</div><div>Arti</div></div>';arr.forEach(([d,i])=>h+=`<div class="row"><div>Bab ${d[0]}</div><div class="k">${d[1]}</div><div>${d[2]}</div><div>${d[3]} ${knownSet.has(i)?'✓':''}</div></div>`);document.getElementById('listbox').innerHTML=h}
+function newQuiz(){let d=data[Math.floor(Math.random()*data.length)], correct=d[3], opts=[correct];while(opts.length<4){let x=data[Math.floor(Math.random()*data.length)][3];if(!opts.includes(x))opts.push(x)}opts.sort(()=>Math.random()-.5);document.getElementById('qkanji').textContent=d[1];document.getElementById('qkana').textContent=d[2];document.getElementById('score').textContent=`Skor: ${score} / ${answered}`;document.getElementById('result').textContent='';document.getElementById('opts').innerHTML=opts.map(o=>`<button onclick="answer(this,${JSON.stringify(o===correct)},${JSON.stringify(correct)})">${o}</button>`).join('')}
+function answer(btn,ok,correct){if(document.getElementById('result').textContent)return;answered++;if(ok){score++;btn.style.fontWeight='700';document.getElementById('result').textContent='✅ Benar!'}else{btn.style.fontWeight='700';document.getElementById('result').textContent='❌ Salah — jawaban: '+correct}document.getElementById('score').textContent=`Skor: ${score} / ${answered}`}
+function resetAll(){knownSet.clear();localStorage.removeItem("known35_38");pos=0;score=0;answered=0;order=[...Array(data.length).keys()];show();renderList()}
+show();
+</script>
+</body>
+</html>
