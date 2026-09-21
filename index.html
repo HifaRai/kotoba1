@@ -1,144 +1,2135 @@
-<!doctype html>
-<html lang="id">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>N4 Kanji — Bab 35–38</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600&display=swap');
-:root{
- --bg:#f3f1ec;--paper:#faf9f6;--ink:#292824;--muted:#8b8880;
- --line:#dedbd3;--accent:#3d5148;--accent2:#b8a58a;--soft:#e9e6de;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background-image:radial-gradient(#777 0.45px,transparent .45px);background-size:7px 7px}
-.wrap{position:relative;max-width:760px;margin:auto;padding:28px 18px 50px}
-.top{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:26px}
-.brand{display:flex;gap:13px;align-items:center}
-.logo{width:42px;height:42px;border:1px solid var(--line);background:var(--paper);border-radius:50%;display:grid;place-items:center;font-family:"Noto Serif JP",serif;font-size:21px}
-h1{font-family:"Noto Serif JP",serif;font-size:22px;font-weight:500;letter-spacing:.02em;margin:0}
-.sub{color:var(--muted);font-size:11px;letter-spacing:.08em;margin-top:5px}
-.btn{border:1px solid var(--line);background:rgba(250,249,246,.8);color:var(--ink);border-radius:999px;padding:9px 13px;font:inherit;font-size:12px;cursor:pointer;transition:.2s}
-.btn:hover{transform:translateY(-1px);border-color:#bbb6ac}
-.btn.dark{background:var(--accent);color:#fff;border-color:var(--accent)}
-.tabs{display:flex;gap:6px;padding:5px;background:rgba(233,230,222,.7);border:1px solid var(--line);border-radius:15px;margin-bottom:20px}
-.tabs button{flex:1;border:0;background:transparent;color:var(--muted);border-radius:11px;padding:10px 7px;font:inherit;font-size:12px;cursor:pointer}
-.tabs button.active{background:var(--paper);color:var(--ink);box-shadow:0 2px 8px #00000008}
-.panel{display:none}.panel.active{display:block}
-.progress{font-size:11px;color:var(--muted);letter-spacing:.05em;margin:0 3px 10px}
-.card{position:relative;min-height:385px;background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:38px 25px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;cursor:pointer;box-shadow:0 12px 35px #504b3f0b;overflow:hidden}
-.card:before{content:"";position:absolute;top:0;left:15%;right:15%;height:1px;background:var(--accent2);opacity:.7}
-.lesson{font-size:10px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase;margin-bottom:26px}
-.kanji{font-family:"Noto Serif JP",serif;font-size:96px;font-weight:400;line-height:1}
-.kana{font-family:"Noto Serif JP",serif;font-size:20px;margin-top:19px}
-.meaning{font-size:15px;margin-top:7px;color:#55524c}
-.hint{font-size:10px;color:#aaa69d;margin-top:30px;letter-spacing:.04em}
-.actions{display:flex;justify-content:center;gap:7px;margin:13px 0}
-.actions .btn{min-width:108px}
-.search{width:100%;padding:13px 15px;background:var(--paper);border:1px solid var(--line);border-radius:13px;font:inherit;font-size:13px;outline:none;margin-bottom:10px}
-.search:focus{border-color:#aaa49a}
-.table{background:var(--paper);border:1px solid var(--line);border-radius:17px;overflow:hidden}
-.row{display:grid;grid-template-columns:62px 85px 1fr 1.25fr;gap:8px;padding:11px 13px;border-bottom:1px solid #e8e5de;align-items:center;font-size:12px}
-.row:last-child{border:0}.head{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:#f4f2ed}
-.k{font-family:"Noto Serif JP",serif;font-size:23px}
-.quizbox{background:var(--paper);border:1px solid var(--line);border-radius:23px;padding:25px}
-.qtop{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;letter-spacing:.08em}
-.qkanji{font-family:"Noto Serif JP",serif;font-size:74px;text-align:center;margin:25px 0 5px}
-.small{font-size:11px;color:var(--muted)}
-.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
-.opts button{padding:13px 12px;border:1px solid var(--line);background:#fffdf9;color:var(--ink);border-radius:12px;cursor:pointer;text-align:left;font:inherit;font-size:12px;transition:.15s}
-.opts button:hover{background:var(--soft)}
-.result{text-align:center;margin-top:15px;font-size:12px;min-height:17px}
-.score{text-align:center;color:var(--muted);font-size:10px;letter-spacing:.08em}
-@media(max-width:560px){
- .wrap{padding:22px 13px 42px}.top{margin-bottom:20px}
- .card{min-height:350px}.kanji{font-size:78px}
- .row{grid-template-columns:48px 67px 1fr}.row .meaning{grid-column:3}
- .opts{grid-template-columns:1fr}.actions .btn{min-width:auto;padding:9px 11px}
-}
-</style>
-</head>
-<body>
-<div class="wrap">
-  <div class="top">
-    <div class="brand">
-      <div class="logo">日</div>
-      <div><h1>N4 Kanji · Bab 35–38</h1><div class="sub">MINNA NO NIHONGO II · STUDY DECK</div></div>
+<!-- =====================================================
+     QUIZ KANJI BAB 41–42
+===================================================== -->
+
+<section id="quiz4142" class="page">
+
+  <div class="quiz4142-container">
+
+    <!-- HEADER -->
+    <div class="quiz4142-header">
+
+      <div class="quiz4142-badge">
+        漢字
+      </div>
+
+      <h2>Kanji Quiz</h2>
+
+      <p>
+        Minna no Nihongo II • Bab 41–42
+      </p>
+
     </div>
-    <button class="btn" onclick="resetAll()">reset</button>
+
+
+    <!-- ==============================
+         SETTING QUIZ
+    =============================== -->
+
+    <div id="quiz4142Setup" class="quiz4142-setup">
+
+      <!-- BAB -->
+
+      <div class="quiz4142-setting">
+
+        <label for="quiz4142Chapter">
+          Pilih Bab
+        </label>
+
+        <select id="quiz4142Chapter">
+
+          <option value="41">
+            Bab 41
+          </option>
+
+          <option value="42">
+            Bab 42
+          </option>
+
+          <option value="all">
+            Bab 41 + 42
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- ARAH SOAL -->
+
+      <div class="quiz4142-setting">
+
+        <label for="quiz4142Mode">
+          Arah Soal
+        </label>
+
+        <select id="quiz4142Mode">
+
+          <option value="jp-id">
+            Kanji → Indonesia
+          </option>
+
+          <option value="id-jp">
+            Indonesia → Kanji
+          </option>
+
+          <option value="mixed">
+            Campur
+
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- JUMLAH SOAL -->
+
+      <div class="quiz4142-setting">
+
+        <label for="quiz4142Count">
+          Jumlah Soal
+        </label>
+
+        <select id="quiz4142Count">
+
+          <option value="5">
+            5 soal
+          </option>
+
+          <option value="10" selected>
+            10 soal
+          </option>
+
+          <option value="15">
+            15 soal
+          </option>
+
+          <option value="20">
+            20 soal
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- START -->
+
+      <button
+        id="quiz4142StartButton"
+        class="quiz4142-button quiz4142-start"
+        onclick="startQuiz4142()"
+      >
+        Mulai Quiz
+      </button>
+
+    </div>
+
+
+    <!-- ==============================
+         QUIZ GAME
+    =============================== -->
+
+    <div
+      id="quiz4142Game"
+      class="quiz4142-game"
+      style="display:none;"
+    >
+
+      <!-- TOP -->
+
+      <div class="quiz4142-top">
+
+        <span id="quiz4142Progress">
+          1 / 10
+        </span>
+
+        <span id="quiz4142Score">
+          Skor: 0
+        </span>
+
+      </div>
+
+
+      <!-- PROGRESS -->
+
+      <div class="quiz4142-progress">
+
+        <div
+          id="quiz4142ProgressBar"
+        ></div>
+
+      </div>
+
+
+      <!-- QUESTION -->
+
+      <div class="quiz4142-question">
+
+        <div
+          id="quiz4142Direction"
+          class="quiz4142-direction"
+        >
+          Kanji → Indonesia
+        </div>
+
+        <div
+          id="quiz4142Question"
+          class="quiz4142-question-text"
+        >
+          お祝い
+        </div>
+
+        <div
+          id="quiz4142Reading"
+          class="quiz4142-reading"
+        ></div>
+
+      </div>
+
+
+      <!-- ANSWERS -->
+
+      <div
+        id="quiz4142Answers"
+        class="quiz4142-answers"
+      ></div>
+
+
+      <!-- FEEDBACK -->
+
+      <div
+        id="quiz4142Feedback"
+        class="quiz4142-feedback"
+      ></div>
+
+
+      <!-- NEXT -->
+
+      <button
+        id="quiz4142Next"
+        class="quiz4142-button quiz4142-next"
+        onclick="nextQuiz4142()"
+        style="display:none;"
+      >
+        Soal Berikutnya →
+      </button>
+
+    </div>
+
+
+    <!-- ==============================
+         RESULT
+    =============================== -->
+
+    <div
+      id="quiz4142Result"
+      class="quiz4142-result"
+      style="display:none;"
+    >
+
+      <div class="quiz4142-result-icon">
+        ✦
+      </div>
+
+      <h2>Quiz selesai!</h2>
+
+      <div
+        id="quiz4142FinalScore"
+        class="quiz4142-final-score"
+      >
+        0 / 10
+      </div>
+
+      <p
+        id="quiz4142FinalText"
+        class="quiz4142-final-text"
+      >
+        0% benar
+      </p>
+
+
+      <button
+        class="quiz4142-button"
+        onclick="restartQuiz4142()"
+      >
+        Ulangi Quiz
+      </button>
+
+    </div>
+
   </div>
 
-  <div class="tabs">
-    <button class="active" onclick="tab('cards',this)">flashcards</button>
-    <button onclick="tab('list',this)">kotoba</button>
-    
-  </div>
+</section>
 
-  <section id="cards" class="panel active">
-    <div class="progress" id="progress"></div>
-    <div class="card" onclick="flip()">
-      <div class="lesson" id="clesson"></div>
-      <div class="kanji" id="ckanji">漢字</div>
-      <div class="kana" id="ckana"></div>
-      <div class="meaning" id="cmeaning"></div>
-      <div class="hint" id="hint">Ketuk kartu untuk membalik</div>
-    </div>
-    <div class="actions">
-      <button class="btn" onclick="prev(event)">← Sebelumnya</button>
-      <button class="btn" onclick="shuffle(event)">🔀 Acak</button>
-      <button class="btn dark" onclick="known(event)">✓ Hafal</button>
-    </div>
-  </section>
 
-  <section id="list" class="panel">
-    <input id="search" class="search" placeholder="Cari kanji / reading / arti…" oninput="renderList()">
-    <div id="listbox" class="table"></div>
-  </section>
+/* =====================================================
+   QUIZ KANJI BAB 41–42
+===================================================== */
 
-  <section id="quiz" class="panel">
-    <div class="quizbox">
-      <div class="score" id="score"></div>
-      <div class="small">Pilih arti yang paling tepat:</div>
-      <div class="qkanji" id="qkanji"></div>
-      <div class="small" style="text-align:center" id="qkana"></div>
-      <div class="opts" id="opts"></div>
-      <div class="result" id="result"></div>
-      <div class="actions"><button class="btn dark" onclick="newQuiz()">🔁 Soal berikutnya</button></div>
-    </div>
-  </section>
-</div>
-  <div style="text-align:center;color:#aaa69d;font-size:9px;letter-spacing:.14em;margin-top:30px">学び続ける · KEEP LEARNING</div>
+#quiz4142{
+  padding-bottom:50px;
+}
 
-<script>
-const data = [
-/* 35 */
-["35","咲きます","さきます","mekar / berbunga"],["35","変わります","かわります","berubah"],["35","困ります","こまります","mengalami kesulitan / bingung"],["35","付けます","つけます","memberi tanda / menandai"],["35","拾います","ひろいます","memungut"],["35","かかります","かかります","tersambung (telepon)"],["35","楽（な）","らく（な）","nyaman / mudah"],["35","正しい","ただしい","benar / tepat"],["35","珍しい","めずらしい","langka / tidak biasa"],["35","方","かた","orang (bentuk hormat)"],["35","向こう","むこう","seberang / sebelah sana"],["35","島","しま","pulau"],["35","村","むら","desa"],["35","港","みなと","pelabuhan"],["35","近所","きんじょ","lingkungan sekitar"],["35","屋上","おくじょう","atap / rooftop"],["35","海外","かいがい","luar negeri"],["35","山登り","やまのぼり","mendaki gunung"],["35","ハイキング","ハイキング","hiking"],["35","機会","きかい","kesempatan"],["35","許可","きょか","izin"],["35","丸","まる","lingkaran"],["35","操作","そうさ","pengoperasian"],["35","方法","ほうほう","cara / metode"],["35","設備","せつび","fasilitas / perlengkapan"],["35","カーテン","カーテン","tirai"],["35","ひも","ひも","tali"],["35","蓋","ふた","tutup"],["35","葉","は","daun"],["35","曲","きょく","karya musik / lagu"],["35","楽しみ","たのしみ","kesenangan / hal yang ditunggu"],["35","もっと","もっと","lebih / lebih banyak"],["35","初めに","はじめに","pertama-tama"],["35","終わります","おわります","selesai / berakhir"],["35","それなら","それなら","kalau begitu"],["35","夜行バス","やこうバス","bus malam"],["35","旅行社","りょこうしゃ","agen perjalanan"],["35","詳しい","くわしい","detail / mengetahui dengan baik"],["35","スキー場","スキーじょう","resor ski"],["35","交わります","まじわります","bergaul"],["35","諺","ことわざ","peribahasa"],["35","仲良くします","なかよくします","bergaul akrab"],["35","必要（な）","ひつよう（な）","perlu / penting"],
-/*36*/
-["36","届きます","とどきます","sampai / terkirim"],["36","出ます","でます","ikut / berpartisipasi"],["36","打ちます","うちます","mengetik"],["36","貯金します","ちょきんします","menabung"],["36","太ります","ふとります","bertambah gemuk / berat badan naik"],["36","やせます","やせます","menjadi kurus / berat badan turun"],["36","過ぎます","すぎます","melewati / berlalu"],["36","慣れます","なれます","terbiasa"],["36","硬い","かたい","keras"],["36","軟らかい","やわらかい","lunak / lembut"],["36","電子～","でんし～","elektronik ~"],["36","携帯～","けいたい～","portable / seluler ~"],["36","工場","こうじょう","pabrik"],["36","健康","けんこう","kesehatan"],["36","剣道","けんどう","kendo"],["36","柔道","じゅうどう","judo"],["36","宇宙","うちゅう","angkasa / alam semesta"],["36","毎週","まいしゅう","setiap minggu"],["36","毎月","まいつき","setiap bulan"],["36","毎年","まいとし","setiap tahun"],["36","必ず","かならず","pasti / tanpa gagal"],["36","絶対に","ぜったいに","mutlak / pasti"],["36","上手に","じょうずに","dengan baik / terampil"],["36","やっと","やっと","akhirnya"],["36","かなり","かなり","cukup / lumayan"],["36","無理な","むりな","mustahil / berlebihan"],["36","電源","でんげん","sumber listrik / power"],["36","健康","けんこう","kesehatan"],
-/*37*/
-["37","褒めます","ほめます","memuji"],["37","叱ります","しかります","memarahi"],["37","誘います","さそいます","mengajak / mengundang"],["37","起こします","おこします","membangunkan"],["37","招待します","しょうたいします","mengundang"],["37","頼みます","たのみます","meminta"],["37","注意します","ちゅういします","memperingatkan / menasihati"],["37","盗ります","とります","mencuri / merampok"],["37","踏みます","ふみます","menginjak"],["37","壊します","こわします","merusakkan"],["37","汚します","よごします","mengotori"],["37","行います","おこないます","melaksanakan"],["37","輸出します","ゆしゅつします","mengekspor"],["37","輸入します","ゆにゅうします","mengimpor"],["37","翻訳します","ほんやくします","menerjemahkan"],["37","発明します","はつめいします","menemukan / menciptakan (invensi)"],["37","発見します","はっけんします","menemukan"],["37","設計します","せっけいします","merancang"],["37","米","こめ","beras"],["37","麦","むぎ","gandum / jelai"],["37","石油","せきゆ","minyak bumi"],["37","原料","げんりょう","bahan baku"],["37","泥棒","どろぼう","pencuri"],["37","警官","けいかん","polisi"],["37","建築家","けんちくか","arsitek"],["37","科学者","かがくしゃ","ilmuwan"],["37","漫画","まんが","komik"],["37","世界中","せかいじゅう","seluruh dunia"],["37","技術","ぎじゅつ","teknologi / teknik"],["37","土地","とち","tanah / lahan"],["37","騒音","そうおん","kebisingan"],["37","利用します","りようします","menggunakan"],["37","アクセス","アクセス","akses"],["37","～世紀","～せいき","abad ke-~"],["37","豪華（な）","ごうか（な）","mewah"],["37","彫刻","ちょうこく","ukiran / patung"],["37","眠ります","ねむります","tidur"],["37","彫ります","ほります","mengukir"],["37","仲間","なかま","teman / rekan"],
-/*38*/
-["38","参加します","さんかします","ikut / berpartisipasi"],["38","育てます","そだてます","membesarkan / memelihara"],["38","運びます","はこびます","membawa / mengangkut"],["38","亡くなります","なくなります","meninggal dunia"],["38","入院します","にゅういんします","masuk rumah sakit"],["38","退院します","たいいんします","keluar dari rumah sakit"],["38","入れます","いれます","menyalakan (daya)"],["38","切ります","きります","mematikan (daya)"],["38","掛けます","かけます","mengunci"],["38","気持ちがいい","きもちがいい","terasa nyaman / menyenangkan"],["38","気持ちが悪い","きもちがわるい","terasa tidak enak"],["38","大きな～","おおきな～","~ yang besar"],["38","小さな～","ちいさな～","~ yang kecil"],["38","赤ちゃん","あかちゃん","bayi"],["38","小学校","しょうがっこう","sekolah dasar"],["38","中学校","ちゅうがっこう","sekolah menengah pertama"],["38","高校","こうこう","SMA"],["38","大学","だいがく","universitas"],["38","入学します","にゅうがくします","masuk sekolah / kuliah"],["38","卒業します","そつぎょうします","lulus"],["38","両親","りょうしん","orang tua"],["38","将来","しょうらい","masa depan"],["38","調査","ちょうさ","penyelidikan / survei"],["38","研究","けんきゅう","penelitian"],["38","発表","はっぴょう","presentasi / pengumuman"],["38","資料","しりょう","bahan / materi"],["38","文法","ぶんぽう","tata bahasa"],["38","辞書","じしょ","kamus"],["38","意味","いみ","arti / makna"],["38","生活","せいかつ","kehidupan / kehidupan sehari-hari"],["38","経験","けいけん","pengalaman"]
-];
 
-let order=[...Array(data.length).keys()], pos=0, flipped=false, score=0, answered=0;
-let knownSet=new Set(JSON.parse(localStorage.getItem("known35_38")||"[]"));
+.quiz4142-container{
 
-function tab(id,el){document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));el.classList.add('active');if(id==='list')renderList();if(id==='quiz')newQuiz();}
-function current(){return data[order[pos]]}
-function show(){let d=current();document.getElementById('clesson').textContent='BAB '+d[0];document.getElementById('ckanji').textContent=flipped?d[1]:'漢字';document.getElementById('ckana').textContent=flipped?d[2]:'';document.getElementById('cmeaning').textContent=flipped?d[3]:'';document.getElementById('hint').textContent=flipped?'Ketuk lagi untuk melihat kanji depan':'Ketuk kartu untuk membalik';document.getElementById('progress').textContent=`Kartu ${pos+1} / ${data.length} · ✓ ${knownSet.size} hafal`;}
-function flip(){flipped=!flipped;show()}
-function next(e){if(e)e.stopPropagation();pos=(pos+1)%order.length;flipped=false;show()}
-function prev(e){if(e)e.stopPropagation();pos=(pos-1+order.length)%order.length;flipped=false;show()}
-function known(e){if(e)e.stopPropagation();knownSet.add(order[pos]);localStorage.setItem("known35_38",JSON.stringify([...knownSet]));next()}
-function shuffle(e){if(e)e.stopPropagation();order.sort(()=>Math.random()-.5);pos=0;flipped=false;show()}
-function renderList(){let q=document.getElementById('search').value.toLowerCase();let arr=data.map((d,i)=>[d,i]).filter(x=>x[0].join(' ').toLowerCase().includes(q));let h='<div class="row head"><div>Bab</div><div>Kanji</div><div>Reading</div><div>Arti</div></div>';arr.forEach(([d,i])=>h+=`<div class="row"><div>Bab ${d[0]}</div><div class="k">${d[1]}</div><div>${d[2]}</div><div>${d[3]} ${knownSet.has(i)?'✓':''}</div></div>`);document.getElementById('listbox').innerHTML=h}
-function newQuiz(){let d=data[Math.floor(Math.random()*data.length)], correct=d[3], opts=[correct];while(opts.length<4){let x=data[Math.floor(Math.random()*data.length)][3];if(!opts.includes(x))opts.push(x)}opts.sort(()=>Math.random()-.5);document.getElementById('qkanji').textContent=d[1];document.getElementById('qkana').textContent=d[2];document.getElementById('score').textContent=`Skor: ${score} / ${answered}`;document.getElementById('result').textContent='';document.getElementById('opts').innerHTML=opts.map(o=>`<button onclick="answer(this,${JSON.stringify(o===correct)},${JSON.stringify(correct)})">${o}</button>`).join('')}
-function answer(btn,ok,correct){if(document.getElementById('result').textContent)return;answered++;if(ok){score++;btn.style.fontWeight='700';document.getElementById('result').textContent='✅ Benar!'}else{btn.style.fontWeight='700';document.getElementById('result').textContent='❌ Salah — jawaban: '+correct}document.getElementById('score').textContent=`Skor: ${score} / ${answered}`}
-function resetAll(){knownSet.clear();localStorage.removeItem("known35_38");pos=0;score=0;answered=0;order=[...Array(data.length).keys()];show();renderList()}
-show();
-</script>
-</body>
-</html>
+  max-width:650px;
+
+  margin:30px auto;
+
+  padding:25px;
+
+  background:rgba(255,255,255,.78);
+
+  border-radius:28px;
+
+  box-shadow:
+    0 12px 35px
+    rgba(100,80,120,.08);
+
+  box-sizing:border-box;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.quiz4142-header{
+
+  text-align:center;
+
+  margin-bottom:30px;
+
+}
+
+
+.quiz4142-badge{
+
+  width:70px;
+
+  height:70px;
+
+  margin:0 auto 15px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:20px;
+
+  background:#eee8f7;
+
+  color:#655477;
+
+  font-size:34px;
+
+  font-weight:800;
+
+}
+
+
+.quiz4142-header h2{
+
+  margin:0;
+
+  font-size:26px;
+
+}
+
+
+.quiz4142-header p{
+
+  margin-top:7px;
+
+  color:#999;
+
+  font-size:14px;
+
+}
+
+
+/* =====================================================
+   SETTING
+===================================================== */
+
+.quiz4142-setting{
+
+  margin-bottom:18px;
+
+}
+
+
+.quiz4142-setting label{
+
+  display:block;
+
+  margin-bottom:8px;
+
+  font-size:14px;
+
+  font-weight:600;
+
+  color:#655b70;
+
+}
+
+
+.quiz4142-setting select{
+
+  width:100%;
+
+  padding:13px 15px;
+
+  border:1px solid #ddd;
+
+  border-radius:14px;
+
+  background:#fff;
+
+  color:#444;
+
+  font-size:15px;
+
+  outline:none;
+
+  box-sizing:border-box;
+
+  cursor:pointer;
+
+}
+
+
+.quiz4142-setting select:focus{
+
+  border-color:#bda8d0;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(189,168,208,.15);
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.quiz4142-button{
+
+  border:none;
+
+  padding:13px 20px;
+
+  border-radius:15px;
+
+  background:#c9b6e4;
+
+  color:#4d405c;
+
+  font-size:15px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.2s;
+
+}
+
+
+.quiz4142-button:hover{
+
+  transform:translateY(-2px);
+
+}
+
+
+.quiz4142-start{
+
+  width:100%;
+
+  margin-top:5px;
+
+}
+
+
+/* =====================================================
+   TOP
+===================================================== */
+
+.quiz4142-top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:10px;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  color:#655b70;
+
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.quiz4142-progress{
+
+  width:100%;
+
+  height:8px;
+
+  background:#eee;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  margin-bottom:35px;
+
+}
+
+
+#quiz4142ProgressBar{
+
+  width:0%;
+
+  height:100%;
+
+  background:#bba4d7;
+
+  transition:.3s;
+
+}
+
+
+/* =====================================================
+   QUESTION
+===================================================== */
+
+.quiz4142-question{
+
+  text-align:center;
+
+  margin-bottom:30px;
+
+}
+
+
+.quiz4142-direction{
+
+  display:inline-block;
+
+  padding:7px 13px;
+
+  border-radius:20px;
+
+  background:#f0ebf5;
+
+  color:#887b92;
+
+  font-size:12px;
+
+  font-weight:600;
+
+  margin-bottom:18px;
+
+}
+
+
+.quiz4142-question-text{
+
+  min-height:55px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:34px;
+
+  font-weight:800;
+
+  line-height:1.4;
+
+}
+
+
+.quiz4142-reading{
+
+  margin-top:8px;
+
+  color:#999;
+
+  font-size:15px;
+
+}
+
+
+/* =====================================================
+   ANSWERS
+===================================================== */
+
+.quiz4142-answers{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:12px;
+
+}
+
+
+.quiz4142-answer{
+
+  min-height:70px;
+
+  padding:15px;
+
+  border:1px solid #e7e2ea;
+
+  border-radius:17px;
+
+  background:#faf8fb;
+
+  color:#4b4450;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.2s;
+
+}
+
+
+.quiz4142-answer:hover{
+
+  transform:translateY(-2px);
+
+  background:#f4eff7;
+
+}
+
+
+.quiz4142-answer:disabled{
+
+  cursor:default;
+
+  transform:none;
+
+}
+
+
+.quiz4142-answer.correct{
+
+  background:#dcefe1;
+
+  border-color:#b9d8c0;
+
+  color:#4f7058;
+
+}
+
+
+.quiz4142-answer.wrong{
+
+  background:#f4dada;
+
+  border-color:#dfb5b5;
+
+  color:#985b5b;
+
+}
+
+
+/* =====================================================
+   FEEDBACK
+===================================================== */
+
+.quiz4142-feedback{
+
+  min-height:25px;
+
+  margin:20px 0;
+
+  text-align:center;
+
+  font-size:14px;
+
+  font-weight:700;
+
+}
+
+
+.quiz4142-feedback.correct{
+
+  color:#52745c;
+
+}
+
+
+.quiz4142-feedback.wrong{
+
+  color:#a45c5c;
+
+}
+
+
+/* =====================================================
+   NEXT
+===================================================== */
+
+.quiz4142-next{
+
+  width:100%;
+
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+.quiz4142-result{
+
+  text-align:center;
+
+  padding:25px 10px;
+
+}
+
+
+.quiz4142-result-icon{
+
+  font-size:45px;
+
+  margin-bottom:10px;
+
+}
+
+
+.quiz4142-result h2{
+
+  margin:0;
+
+}
+
+
+.quiz4142-final-score{
+
+  margin:20px 0 5px;
+
+  font-size:48px;
+
+  font-weight:800;
+
+  color:#665477;
+
+}
+
+
+.quiz4142-final-text{
+
+  color:#999;
+
+  margin-bottom:25px;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+  .quiz4142-container{
+
+    margin:20px 10px;
+
+    padding:20px 15px;
+
+    border-radius:22px;
+
+  }
+
+
+  .quiz4142-question-text{
+
+    font-size:30px;
+
+  }
+
+
+  .quiz4142-answers{
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .quiz4142-answer{
+
+    min-height:60px;
+
+  }
+
+}
+
+/* =====================================================
+   DATABASE KANJI QUIZ
+   MINNA NO NIHONGO II
+   BAB 41–42
+===================================================== */
+
+const kanjiQuiz4142 = {
+
+  /* ===================================================
+     BAB 41
+  =================================================== */
+
+  41: [
+
+    {
+      word:"頂きます",
+      reading:"いただきます",
+      meaning:"menerima"
+    },
+
+    {
+      word:"呼びます",
+      reading:"よびます",
+      meaning:"mengundang / memanggil"
+    },
+
+    {
+      word:"取り替えます",
+      reading:"とりかえます",
+      meaning:"mengganti"
+    },
+
+    {
+      word:"親切にします",
+      reading:"しんせつにします",
+      meaning:"berbuat baik / membantu"
+    },
+
+    {
+      word:"お祝い",
+      reading:"おいわい",
+      meaning:"hadiah / ucapan selamat"
+    },
+
+    {
+      word:"お年玉",
+      reading:"おとしだま",
+      meaning:"uang hadiah tahun baru"
+    },
+
+    {
+      word:"お見舞い",
+      reading:"おみまい",
+      meaning:"kunjungan kepada orang sakit"
+    },
+
+    {
+      word:"興味",
+      reading:"きょうみ",
+      meaning:"minat"
+    },
+
+    {
+      word:"情報",
+      reading:"じょうほう",
+      meaning:"informasi"
+    },
+
+    {
+      word:"文法",
+      reading:"ぶんぽう",
+      meaning:"tata bahasa"
+    },
+
+    {
+      word:"発音",
+      reading:"はつおん",
+      meaning:"pelafalan"
+    },
+
+    {
+      word:"猿",
+      reading:"さる",
+      meaning:"monyet"
+    },
+
+    {
+      word:"餌",
+      reading:"えさ",
+      meaning:"makanan hewan"
+    },
+
+    {
+      word:"絵本",
+      reading:"えほん",
+      meaning:"buku bergambar"
+    },
+
+    {
+      word:"絵はがき",
+      reading:"えはがき",
+      meaning:"kartu pos bergambar"
+    },
+
+    {
+      word:"手袋",
+      reading:"てぶくろ",
+      meaning:"sarung tangan"
+    },
+
+    {
+      word:"指輪",
+      reading:"ゆびわ",
+      meaning:"cincin"
+    },
+
+    {
+      word:"靴下",
+      reading:"くつした",
+      meaning:"kaus kaki"
+    },
+
+    {
+      word:"祖父",
+      reading:"そふ",
+      meaning:"kakek"
+    },
+
+    {
+      word:"祖母",
+      reading:"そぼ",
+      meaning:"nenek"
+    },
+
+    {
+      word:"孫",
+      reading:"まご",
+      meaning:"cucu"
+    },
+
+    {
+      word:"叔父",
+      reading:"おじ",
+      meaning:"paman"
+    },
+
+    {
+      word:"叔母",
+      reading:"おば",
+      meaning:"bibi"
+    },
+
+    {
+      word:"管理人",
+      reading:"かんりにん",
+      meaning:"pengelola / penjaga gedung"
+    },
+
+    {
+      word:"預かります",
+      reading:"あずかります",
+      meaning:"menitipkan / menjaga"
+    },
+
+    {
+      word:"先日",
+      reading:"せんじつ",
+      meaning:"beberapa hari yang lalu"
+    },
+
+    {
+      word:"助かります",
+      reading:"たすかります",
+      meaning:"terbantu / sangat menolong"
+    },
+
+    {
+      word:"二人",
+      reading:"ふたり",
+      meaning:"dua orang"
+    },
+
+    {
+      word:"暖房",
+      reading:"だんぼう",
+      meaning:"pemanas ruangan"
+    },
+
+    {
+      word:"冷房",
+      reading:"れいぼう",
+      meaning:"pendingin ruangan / AC"
+    },
+
+    {
+      word:"温度",
+      reading:"おんど",
+      meaning:"suhu"
+    },
+
+    {
+      word:"幼稚園",
+      reading:"ようちえん",
+      meaning:"taman kanak-kanak"
+    },
+
+    {
+      word:"一言",
+      reading:"ひとこと",
+      meaning:"sepatah kata"
+    },
+
+    {
+      word:"お孫さん",
+      reading:"おまごさん",
+      meaning:"cucu orang lain"
+    },
+
+    {
+      word:"お宅",
+      reading:"おたく",
+      meaning:"rumah Anda / rumah orang lain"
+    },
+
+    {
+      word:"この間",
+      reading:"このあいだ",
+      meaning:"beberapa waktu yang lalu"
+    }
+
+  ],
+
+
+  /* ===================================================
+     BAB 42
+  =================================================== */
+
+  42: [
+
+    {
+      word:"包みます",
+      reading:"つつみます",
+      meaning:"membungkus"
+    },
+
+    {
+      word:"沸かします",
+      reading:"わかします",
+      meaning:"merebus / mendidihkan"
+    },
+
+    {
+      word:"混ぜます",
+      reading:"まぜます",
+      meaning:"mencampur"
+    },
+
+    {
+      word:"計算します",
+      reading:"けいさんします",
+      meaning:"menghitung"
+    },
+
+    {
+      word:"並びます",
+      reading:"ならびます",
+      meaning:"berbaris / mengantre"
+    },
+
+    {
+      word:"出ます",
+      reading:"でます",
+      meaning:"keluar / dibayarkan (bonus)"
+    },
+
+    {
+      word:"厚い",
+      reading:"あつい",
+      meaning:"tebal"
+    },
+
+    {
+      word:"薄い",
+      reading:"うすい",
+      meaning:"tipis"
+    },
+
+    {
+      word:"丈夫な",
+      reading:"じょうぶな",
+      meaning:"kuat / tahan lama"
+    },
+
+    {
+      word:"弁護士",
+      reading:"べんごし",
+      meaning:"pengacara"
+    },
+
+    {
+      word:"音楽家",
+      reading:"おんがくか",
+      meaning:"musisi"
+    },
+
+    {
+      word:"子どもたち",
+      reading:"こどもたち",
+      meaning:"anak-anak"
+    },
+
+    {
+      word:"教育",
+      reading:"きょういく",
+      meaning:"pendidikan"
+    },
+
+    {
+      word:"文化",
+      reading:"ぶんか",
+      meaning:"budaya"
+    },
+
+    {
+      word:"社会",
+      reading:"しゃかい",
+      meaning:"masyarakat"
+    },
+
+    {
+      word:"法律",
+      reading:"ほうりつ",
+      meaning:"hukum"
+    },
+
+    {
+      word:"戦争",
+      reading:"せんそう",
+      meaning:"perang"
+    },
+
+    {
+      word:"平和",
+      reading:"へいわ",
+      meaning:"perdamaian"
+    },
+
+    {
+      word:"目的",
+      reading:"もくてき",
+      meaning:"tujuan"
+    },
+
+    {
+      word:"安全",
+      reading:"あんぜん",
+      meaning:"keamanan / aman"
+    },
+
+    {
+      word:"論文",
+      reading:"ろんぶん",
+      meaning:"makalah / tesis"
+    },
+
+    {
+      word:"関係",
+      reading:"かんけい",
+      meaning:"hubungan"
+    },
+
+    {
+      word:"楽しみ",
+      reading:"たのしみ",
+      meaning:"hal yang dinantikan / kesenangan"
+    },
+
+    {
+      word:"栓抜き",
+      reading:"せんぬき",
+      meaning:"pembuka botol"
+    },
+
+    {
+      word:"缶切り",
+      reading:"かんきり",
+      meaning:"pembuka kaleng"
+    },
+
+    {
+      word:"缶詰",
+      reading:"かんづめ",
+      meaning:"makanan kaleng"
+    },
+
+    {
+      word:"風呂敷",
+      reading:"ふろしき",
+      meaning:"kain pembungkus"
+    },
+
+    {
+      word:"体温計",
+      reading:"たいおんけい",
+      meaning:"termometer"
+    },
+
+    {
+      word:"材料",
+      reading:"ざいりょう",
+      meaning:"bahan / bahan masakan"
+    },
+
+    {
+      word:"石",
+      reading:"いし",
+      meaning:"batu"
+    },
+
+    {
+      word:"一生懸命",
+      reading:"いっしょうけんめい",
+      meaning:"dengan sekuat tenaga"
+    },
+
+    {
+      word:"半分",
+      reading:"はんぶん",
+      meaning:"setengah"
+    },
+
+    {
+      word:"自然",
+      reading:"しぜん",
+      meaning:"alam"
+    },
+
+    {
+      word:"政治",
+      reading:"せいじ",
+      meaning:"politik"
+    },
+
+    {
+      word:"のし袋",
+      reading:"のしぶくろ",
+      meaning:"amplop untuk hadiah uang"
+    }
+
+  ]
+
+};
+
+/* =====================================================
+
+   QUIZ STATE
+
+===================================================== */
+
+let quiz4142Questions = [];
+
+let quiz4142Index = 0;
+
+let quiz4142Score = 0;
+
+let quiz4142Answered = false;
+
+/* =====================================================
+
+   SHUFFLE
+
+===================================================== */
+
+function shuffleQuiz4142(array){
+
+  const result = [...array];
+
+  for(
+
+    let i = result.length - 1;
+
+    i > 0;
+
+    i--
+
+  ){
+
+    const j =
+
+      Math.floor(
+
+        Math.random() * (i + 1)
+
+      );
+
+    [
+
+      result[i],
+
+      result[j]
+
+    ] = [
+
+      result[j],
+
+      result[i]
+
+    ];
+
+  }
+
+  return result;
+
+}
+
+/* =====================================================
+
+   AMBIL DATABASE SESUAI BAB
+
+===================================================== */
+
+function getQuiz4142Data(){
+
+  const chapter =
+
+    document.getElementById(
+
+      "quiz4142Chapter"
+
+    ).value;
+
+  if(chapter === "all"){
+
+    return [
+
+      ...kanjiQuiz4142[41],
+
+      ...kanjiQuiz4142[42]
+
+    ];
+
+  }
+
+  return [
+
+    ...kanjiQuiz4142[chapter]
+
+  ];
+
+}
+
+/* =====================================================
+
+   BUAT PILIHAN JAWABAN
+
+===================================================== */
+
+function createQuiz4142Options(
+
+  correct,
+
+  data,
+
+  mode
+
+){
+
+  let options = [correct];
+
+  const shuffled =
+
+    shuffleQuiz4142(data);
+
+  for(const item of shuffled){
+
+    let value;
+
+    if(mode === "jp-id"){
+
+      value =
+
+        item.meaning;
+
+    }else{
+
+      value =
+
+        item.word;
+
+    }
+
+    if(
+
+      value !== correct &&
+
+      !options.includes(value)
+
+    ){
+
+      options.push(value);
+
+    }
+
+    if(options.length >= 4){
+
+      break;
+
+    }
+
+  }
+
+  return shuffleQuiz4142(
+
+    options
+
+  );
+
+}
+
+/* =====================================================
+
+   MEMBUAT SOAL
+
+===================================================== */
+
+function generateQuiz4142(){
+
+  const data =
+
+    getQuiz4142Data();
+
+  const selectedMode =
+
+    document.getElementById(
+
+      "quiz4142Mode"
+
+    ).value;
+
+  let questionCount =
+
+    Number(
+
+      document.getElementById(
+
+        "quiz4142Count"
+
+      ).value
+
+    );
+
+  questionCount =
+
+    Math.min(
+
+      questionCount,
+
+      data.length
+
+    );
+
+  const selectedQuestions =
+
+    shuffleQuiz4142(data)
+
+      .slice(
+
+        0,
+
+        questionCount
+
+      );
+
+  quiz4142Questions =
+
+    selectedQuestions.map(item => {
+
+      let mode =
+
+        selectedMode;
+
+      /* ==========================
+
+         MODE CAMPUR
+
+      ========================== */
+
+      if(mode === "mixed"){
+
+        mode =
+
+          Math.random() < 0.5
+
+            ? "jp-id"
+
+            : "id-jp";
+
+      }
+
+      let question;
+
+      let correct;
+
+      /* ==========================
+
+         KANJI → INDONESIA
+
+      ========================== */
+
+      if(mode === "jp-id"){
+
+        question =
+
+          item.word;
+
+        correct =
+
+          item.meaning;
+
+      }
+
+      /* ==========================
+
+         INDONESIA → KANJI
+
+      ========================== */
+
+      else{
+
+        question =
+
+          item.meaning;
+
+        correct =
+
+          item.word;
+
+      }
+
+      const options =
+
+        createQuiz4142Options(
+
+          correct,
+
+          data,
+
+          mode
+
+        );
+
+      return {
+
+        item:item,
+
+        mode:mode,
+
+        question:question,
+
+        correct:correct,
+
+        options:options
+
+      };
+
+    });
+
+}
+
+/* =====================================================
+
+   START QUIZ
+
+===================================================== */
+
+function startQuiz4142(){
+
+  generateQuiz4142();
+
+  quiz4142Index = 0;
+
+  quiz4142Score = 0;
+
+  quiz4142Answered = false;
+
+  document.getElementById(
+
+    "quiz4142Setup"
+
+  ).style.display = "none";
+
+  document.getElementById(
+
+    "quiz4142Game"
+
+  ).style.display = "block";
+
+  document.getElementById(
+
+    "quiz4142Result"
+
+  ).style.display = "none";
+
+  showQuiz4142Question();
+
+}
+
+/* =====================================================
+
+   TAMPILKAN SOAL
+
+===================================================== */
+
+function showQuiz4142Question(){
+
+  const current =
+
+    quiz4142Questions[
+
+      quiz4142Index
+
+    ];
+
+  if(!current){
+
+    finishQuiz4142();
+
+    return;
+
+  }
+
+  quiz4142Answered = false;
+
+  /* ==========================
+
+     PROGRESS
+
+  ========================== */
+
+  document.getElementById(
+
+    "quiz4142Progress"
+
+  ).textContent =
+
+    `${quiz4142Index + 1} / ${quiz4142Questions.length}`;
+
+  document.getElementById(
+
+    "quiz4142Score"
+
+  ).textContent =
+
+    `Skor: ${quiz4142Score}`;
+
+  const progress =
+
+    (
+
+      quiz4142Index /
+
+      quiz4142Questions.length
+
+    ) * 100;
+
+  document.getElementById(
+
+    "quiz4142ProgressBar"
+
+  ).style.width =
+
+    `${progress}%`;
+
+  /* ==========================
+
+     ARAH SOAL
+
+  ========================== */
+
+  document.getElementById(
+
+    "quiz4142Direction"
+
+  ).textContent =
+
+    current.mode === "jp-id"
+
+      ? "Kanji → Indonesia"
+
+      : "Indonesia → Kanji";
+
+  /* ==========================
+
+     PERTANYAAN
+
+  ========================== */
+
+  document.getElementById(
+
+    "quiz4142Question"
+
+  ).textContent =
+
+    current.question;
+
+  /* ==========================
+
+     READING
+
+  ========================== */
+
+  const reading =
+
+    document.getElementById(
+
+      "quiz4142Reading"
+
+    );
+
+  /*
+
+   * Jangan tampilkan reading
+
+   * pada mode Kanji → Indonesia,
+
+   * karena reading akan memberi clue.
+
+   */
+
+  if(current.mode === "jp-id"){
+
+    reading.textContent = "";
+
+  }else{
+
+    reading.textContent = "";
+
+  }
+
+  /* ==========================
+
+     PILIHAN
+
+  ========================== */
+
+  const answers =
+
+    document.getElementById(
+
+      "quiz4142Answers"
+
+    );
+
+  answers.innerHTML = "";
+
+  current.options.forEach(
+
+    option => {
+
+      const button =
+
+        document.createElement(
+
+          "button"
+
+        );
+
+      button.className =
+
+        "quiz4142-answer";
+
+      button.textContent =
+
+        option;
+
+      button.onclick =
+
+        function(){
+
+          answerQuiz4142(
+
+            button,
+
+            option
+
+          );
+
+        };
+
+      answers.appendChild(
+
+        button
+
+      );
+
+    }
+
+  );
+
+  /* ==========================
+
+     RESET FEEDBACK
+
+  ========================== */
+
+  const feedback =
+
+    document.getElementById(
+
+      "quiz4142Feedback"
+
+    );
+
+  feedback.textContent = "";
+
+  feedback.className =
+
+    "quiz4142-feedback";
+
+  /* ==========================
+
+     HIDE NEXT
+
+  ========================== */
+
+  document.getElementById(
+
+    "quiz4142Next"
+
+  ).style.display =
+
+    "none";
+
+}
+
+/* =====================================================
+
+   JAWAB SOAL
+
+===================================================== */
+
+function answerQuiz4142(
+
+  selectedButton,
+
+  selectedAnswer
+
+){
+
+  if(quiz4142Answered){
+
+    return;
+
+  }
+
+  quiz4142Answered = true;
+
+  const current =
+
+    quiz4142Questions[
+
+      quiz4142Index
+
+    ];
+
+  const buttons =
+
+    document.querySelectorAll(
+
+      "#quiz4142Answers .quiz4142-answer"
+
+    );
+
+  /* ==========================
+
+     DISABLE SEMUA
+
+  ========================== */
+
+  buttons.forEach(
+
+    button => {
+
+      button.disabled = true;
+
+      if(
+
+        button.textContent ===
+
+        current.correct
+
+      ){
+
+        button.classList.add(
+
+          "correct"
+
+        );
+
+      }
+
+    }
+
+  );
+
+  const feedback =
+
+    document.getElementById(
+
+      "quiz4142Feedback"
+
+    );
+
+  /* ==========================
+
+     BENAR
+
+  ========================== */
+
+  if(
+
+    selectedAnswer ===
+
+    current.correct
+
+  ){
+
+    quiz4142Score++;
+
+    selectedButton.classList.add(
+
+      "correct"
+
+    );
+
+    feedback.textContent =
+
+      "✓ Benar!";
+
+    feedback.classList.add(
+
+      "correct"
+
+    );
+
+  }
+
+  /* ==========================
+
+     SALAH
+
+  ========================== */
+
+  else{
+
+    selectedButton.classList.add(
+
+      "wrong"
+
+    );
+
+    feedback.textContent =
+
+      `Jawaban yang benar: ${current.correct}`;
+
+    feedback.classList.add(
+
+      "wrong"
+
+    );
+
+  }
+
+  document.getElementById(
+
+    "quiz4142Score"
+
+  ).textContent =
+
+    `Skor: ${quiz4142Score}`;
+
+  /* ==========================
+
+     SHOW NEXT
+
+  ========================== */
+
+  document.getElementById(
+
+    "quiz4142Next"
+
+  ).style.display =
+
+    "block";
+
+}
+
+/* =====================================================
+
+   NEXT
+
+===================================================== */
+
+function nextQuiz4142(){
+
+  quiz4142Index++;
+
+  if(
+
+    quiz4142Index >=
+
+    quiz4142Questions.length
+
+  ){
+
+    finishQuiz4142();
+
+    return;
+
+  }
+
+  showQuiz4142Question();
+
+}
+
+/* =====================================================
+
+   FINISH
+
+===================================================== */
+
+function finishQuiz4142(){
+
+  document.getElementById(
+
+    "quiz4142Game"
+
+  ).style.display =
+
+    "none";
+
+  document.getElementById(
+
+    "quiz4142Result"
+
+  ).style.display =
+
+    "block";
+
+  const total =
+
+    quiz4142Questions.length;
+
+  const percentage =
+
+    total > 0
+
+      ? Math.round(
+
+          (
+
+            quiz4142Score /
+
+            total
+
+          ) * 100
+
+        )
+
+      : 0;
+
+  document.getElementById(
+
+    "quiz4142ProgressBar"
+
+  ).style.width =
+
+    "100%";
+
+  document.getElementById(
+
+    "quiz4142FinalScore"
+
+  ).textContent =
+
+    `${quiz4142Score} / ${total}`;
+
+  document.getElementById(
+
+    "quiz4142FinalText"
+
+  ).textContent =
+
+    `${percentage}% benar`;
+
+}
+
+/* =====================================================
+
+   RESTART
+
+===================================================== */
+
+function restartQuiz4142(){
+
+  document.getElementById(
+
+    "quiz4142Result"
+
+  ).style.display =
+
+    "none";
+
+  document.getElementById(
+
+    "quiz4142Game"
+
+  ).style.display =
+
+    "none";
+
+  document.getElementById(
+
+    "quiz4142Setup"
+
+  ).style.display =
+
+    "block";
+
+  quiz4142Questions = [];
+
+  quiz4142Index = 0;
+
+  quiz4142Score = 0;
+
+  quiz4142Answered = false;
+
+}
