@@ -272,22 +272,19 @@
 
 
 
-<!-- =========================================================
-     CSS
-========================================================= -->
-
 <style>
-/* =========================================================
+
+/* =====================================================
    QUIZ KANJI BAB 41–42
-   MOBILE / CLEAN / SOFT JAPANESE AESTHETIC
-   ========================================================= */
+   MOBILE FIRST
+   ===================================================== */
 
 .quiz4142{
   width:100%;
-  max-width:620px;
+  max-width:650px;
   margin:0 auto;
-  padding:18px 14px 40px;
-  box-sizing:border-box;
+  padding:16px 12px 40px;
+
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -295,406 +292,497 @@
     Roboto,
     Arial,
     sans-serif;
-  color:#3f3b45;
+
+  color:#403b46;
 }
 
-/* =========================
+
+/* =====================================================
    HEADER
-   ========================= */
+   ===================================================== */
 
 .quiz4142-hero{
-  text-align:center;
   padding:22px 16px;
-  margin-bottom:16px;
+  margin-bottom:15px;
+
+  text-align:center;
 
   background:linear-gradient(
     135deg,
-    #f7f1f6,
+    #f8f1f6,
     #f1edf7
   );
 
-  border:1px solid #ebe3ed;
-  border-radius:24px;
+  border:1px solid #ebe2ed;
+  border-radius:22px;
 }
 
 .quiz4142-hero h2{
   margin:0;
-  font-size:24px;
+
+  font-size:23px;
   font-weight:700;
-  letter-spacing:-0.3px;
-  color:#403b48;
+
+  color:#403b46;
 }
 
 .quiz4142-hero p{
-  margin:7px 0 0;
-  font-size:13px;
+  margin:6px 0 0;
+
+  font-size:12px;
   font-weight:400;
-  color:#8b8492;
-  line-height:1.5;
+
+  color:#8d8491;
 }
 
-/* =========================
-   CARD UTAMA
-   ========================= */
+
+/* =====================================================
+   MAIN CARD
+   ===================================================== */
 
 .quiz4142-card{
+  width:100%;
+
+  padding:17px;
+
   background:#ffffff;
-  border:1px solid #eee9ef;
-  border-radius:22px;
-  padding:20px 16px;
-  box-shadow:0 5px 20px rgba(80,65,90,.06);
-  box-sizing:border-box;
+
+  border:1px solid #eee8ef;
+  border-radius:20px;
+
+  box-shadow:
+    0 5px 18px rgba(70,55,75,.05);
 }
 
-/* =========================
-   PILIHAN BAB
-   ========================= */
+
+/* =====================================================
+   LABEL
+   ===================================================== */
 
 .quiz4142-label{
   display:block;
-  margin-bottom:8px;
-  font-size:13px;
+
+  margin-bottom:7px;
+
+  font-size:12px;
   font-weight:600;
-  color:#625b68;
+
+  color:#655d69;
 }
+
+
+/* =====================================================
+   SELECT
+   ===================================================== */
 
 .quiz4142-select{
   width:100%;
-  height:48px;
-  padding:0 14px;
+  height:46px;
+
+  padding:0 12px;
 
   border:1px solid #ddd5e1;
-  border-radius:13px;
+  border-radius:12px;
 
   background:#faf8fb;
-  color:#423d48;
 
-  font-family:inherit;
-  font-size:14px;
+  color:#45404a;
+
+  font-size:13px;
   font-weight:500;
 
   outline:none;
-  box-sizing:border-box;
 }
 
 .quiz4142-select:focus{
-  border-color:#b9a5c5;
-  box-shadow:0 0 0 3px rgba(185,165,197,.15);
+  border-color:#bda8c5;
+
+  box-shadow:
+    0 0 0 3px rgba(189,168,197,.13);
 }
 
-/* =========================
-   MODE QUIZ
-   ========================= */
+
+/* =====================================================
+   MODE BUTTON
+   ===================================================== */
 
 .quiz4142-mode{
   display:grid;
+
   grid-template-columns:1fr 1fr;
-  gap:9px;
-  margin-top:12px;
+
+  gap:8px;
+
+  margin-top:11px;
 }
 
 .quiz4142-mode button{
-  min-height:46px;
-  padding:10px 8px;
+  min-height:45px;
 
-  border:1px solid #e2dce5;
-  border-radius:13px;
+  padding:8px;
 
-  background:#faf9fb;
-  color:#665e6d;
+  border:1px solid #e1d9e4;
+  border-radius:12px;
 
-  font-family:inherit;
-  font-size:13px;
+  background:#faf8fb;
+
+  color:#6e6572;
+
+  font-size:12px;
   font-weight:600;
 
   cursor:pointer;
+
   transition:.2s ease;
 }
 
-.quiz4142-mode button:hover{
-  transform:translateY(-1px);
+.quiz4142-mode button:active{
+  transform:scale(.97);
 }
 
 .quiz4142-mode button.active{
-  background:#eee6f2;
+  background:#eee5f2;
+
   border-color:#cdbbd5;
+
   color:#66506f;
 }
 
-/* =========================
-   BUTTON START
-   ========================= */
+
+/* =====================================================
+   START BUTTON
+   ===================================================== */
 
 .quiz4142-start{
   width:100%;
-  min-height:50px;
-  margin-top:15px;
+  min-height:49px;
+
+  margin-top:12px;
 
   border:0;
-  border-radius:15px;
+  border-radius:13px;
 
   background:#75627e;
-  color:white;
 
-  font-family:inherit;
-  font-size:15px;
+  color:#ffffff;
+
+  font-size:14px;
   font-weight:700;
 
   cursor:pointer;
-  box-shadow:0 5px 14px rgba(117,98,126,.18);
+
+  box-shadow:
+    0 5px 13px rgba(117,98,126,.15);
 
   transition:.2s ease;
-}
-
-.quiz4142-start:hover{
-  transform:translateY(-1px);
 }
 
 .quiz4142-start:active{
   transform:scale(.98);
 }
 
-/* =========================
+
+/* =====================================================
+   QUIZ AREA
+   ===================================================== */
+
+.quiz4142-question-area{
+  margin-top:16px;
+}
+
+
+/* =====================================================
    PROGRESS
-   ========================= */
+   ===================================================== */
 
 .quiz4142-progress{
   display:flex;
+
   justify-content:space-between;
   align-items:center;
 
-  margin-bottom:12px;
+  margin-bottom:7px;
 
-  font-size:12px;
+  font-size:11px;
   font-weight:600;
-  color:#8b8490;
+
+  color:#918893;
 }
 
 .quiz4142-progress-bar{
   width:100%;
-  height:7px;
+  height:6px;
 
-  background:#eeeaf0;
+  margin-bottom:14px;
+
+  background:#eee9f0;
+
   border-radius:20px;
-  overflow:hidden;
 
-  margin-bottom:20px;
+  overflow:hidden;
 }
 
 .quiz4142-progress-fill{
+  width:0;
   height:100%;
-  width:0%;
 
   background:#9b84a7;
+
   border-radius:20px;
 
   transition:width .3s ease;
 }
 
-/* =========================
-   SOAL
-   ========================= */
+
+/* =====================================================
+   QUESTION
+   ===================================================== */
 
 .quiz4142-question{
-  padding:22px 14px;
+  width:100%;
 
-  background:#faf8fb;
-  border:1px solid #eee8f0;
+  padding:25px 14px;
 
-  border-radius:18px;
+  margin-bottom:13px;
 
   text-align:center;
-  margin-bottom:15px;
+
+  background:#faf8fb;
+
+  border:1px solid #eee7ef;
+  border-radius:18px;
 }
 
 .quiz4142-question-number{
-  margin-bottom:10px;
+  margin-bottom:8px;
 
-  font-size:11px;
+  font-size:10px;
   font-weight:600;
-  color:#a095a6;
+
+  color:#a198a4;
 
   text-transform:uppercase;
-  letter-spacing:.5px;
+  letter-spacing:.4px;
 }
 
 .quiz4142-question-text{
   margin:0;
 
-  font-size:28px;
+  font-size:31px;
   font-weight:700;
-  line-height:1.4;
 
-  color:#3f3945;
+  line-height:1.35;
+
+  color:#3e3844;
 }
 
-/* kalau soal berupa bahasa Indonesia */
+
+/* Untuk pertanyaan bahasa Indonesia */
+
 .quiz4142-question-text.indonesia{
   font-size:20px;
   font-weight:600;
+
   line-height:1.5;
 }
 
-/* =========================
-   PILIHAN JAWABAN
-   ========================= */
+
+/* =====================================================
+   OPTIONS
+   ===================================================== */
 
 .quiz4142-options{
   display:grid;
+
   grid-template-columns:1fr;
-  gap:10px;
+
+  gap:9px;
 }
 
 .quiz4142-option{
   width:100%;
-  min-height:54px;
+  min-height:53px;
 
-  padding:12px 14px;
+  display:flex;
+  align-items:center;
+
+  padding:10px 12px;
+
+  border:1px solid #e3dce5;
+  border-radius:14px;
 
   background:#ffffff;
-  border:1px solid #e4dee7;
-  border-radius:15px;
 
-  color:#4b4551;
+  color:#4d4652;
 
-  font-family:inherit;
-  font-size:15px;
+  font-size:14px;
   font-weight:500;
 
   text-align:left;
 
   cursor:pointer;
-  transition:.18s ease;
 
-  box-sizing:border-box;
-}
-
-.quiz4142-option:hover{
-  background:#faf7fb;
-  border-color:#cdbbd5;
-  transform:translateY(-1px);
+  transition:
+    background .18s ease,
+    border .18s ease,
+    transform .15s ease;
 }
 
 .quiz4142-option:active{
   transform:scale(.985);
 }
 
-/* nomor A B C D */
+.quiz4142-option:hover{
+  background:#faf7fb;
+
+  border-color:#cdbbd5;
+}
+
+
+/* =====================================================
+   OPTION LETTER
+   ===================================================== */
 
 .quiz4142-option-letter{
-  display:inline-flex;
+  flex:0 0 auto;
 
   width:27px;
   height:27px;
 
-  margin-right:9px;
+  display:flex;
 
   align-items:center;
   justify-content:center;
 
+  margin-right:9px;
+
   border-radius:50%;
 
   background:#f0ebf2;
-  color:#76677d;
 
-  font-size:12px;
+  color:#75657d;
+
+  font-size:11px;
   font-weight:700;
 }
 
-/* =========================
-   BENAR
-   ========================= */
+
+/* =====================================================
+   CORRECT
+   ===================================================== */
 
 .quiz4142-option.correct{
   background:#edf7f0;
+
   border-color:#b8d8c1;
-  color:#3d6849;
+
+  color:#3f6849;
 }
 
 .quiz4142-option.correct
 .quiz4142-option-letter{
   background:#d7ebdc;
-  color:#3d6849;
+
+  color:#3f6849;
 }
 
-/* =========================
-   SALAH
-   ========================= */
+
+/* =====================================================
+   WRONG
+   ===================================================== */
 
 .quiz4142-option.wrong{
   background:#faf0f1;
+
   border-color:#e2c1c5;
-  color:#80545a;
+
+  color:#80545b;
 }
 
 .quiz4142-option.wrong
 .quiz4142-option-letter{
   background:#efdadd;
-  color:#80545a;
+
+  color:#80545b;
 }
 
-/* =========================
+
+/* =====================================================
    FEEDBACK
-   ========================= */
+   ===================================================== */
 
 .quiz4142-feedback{
-  margin-top:14px;
-  padding:14px;
+  margin-top:12px;
 
-  border-radius:15px;
+  padding:13px;
 
   background:#f8f5f9;
-  border:1px solid #ebe4ed;
 
-  font-size:13px;
+  border:1px solid #ebe4ed;
+  border-radius:13px;
+
+  font-size:12px;
   font-weight:400;
 
   line-height:1.6;
-  color:#655e69;
+
+  color:#665e69;
 }
 
 .quiz4142-feedback strong{
   font-weight:700;
+
   color:#514956;
 }
 
-/* =========================
+
+/* =====================================================
    NEXT BUTTON
-   ========================= */
+   ===================================================== */
 
 .quiz4142-next{
   width:100%;
-  min-height:50px;
+  min-height:49px;
 
-  margin-top:14px;
+  margin-top:12px;
 
   border:0;
-  border-radius:15px;
+  border-radius:13px;
 
   background:#75627e;
-  color:white;
 
-  font-family:inherit;
+  color:#ffffff;
+
   font-size:14px;
   font-weight:700;
 
   cursor:pointer;
+
+  transition:.2s ease;
 }
 
-/* =========================
-   HASIL
-   ========================= */
+.quiz4142-next:active{
+  transform:scale(.98);
+}
+
+
+/* =====================================================
+   RESULT
+   ===================================================== */
 
 .quiz4142-result{
-  text-align:center;
   padding:25px 15px;
+
+  text-align:center;
 }
 
 .quiz4142-result-score{
   font-size:44px;
   font-weight:700;
+
+  line-height:1;
+
   color:#75627e;
-  line-height:1.1;
 }
 
 .quiz4142-result-title{
@@ -702,6 +790,7 @@
 
   font-size:20px;
   font-weight:700;
+
   color:#403b46;
 }
 
@@ -710,62 +799,73 @@
 
   font-size:13px;
   font-weight:400;
+
   line-height:1.6;
-  color:#88818d;
+
+  color:#89818d;
 }
 
-/* =========================
+
+/* =====================================================
    RESTART
-   ========================= */
+   ===================================================== */
 
 .quiz4142-restart{
   width:100%;
-  min-height:49px;
+  min-height:48px;
 
-  margin-top:18px;
+  margin-top:17px;
 
-  border:1px solid #d9cedd;
-  border-radius:15px;
+  border:1px solid #ddd2e1;
+  border-radius:13px;
 
-  background:#f7f3f8;
-  color:#66566d;
+  background:#f3edf5;
 
-  font-family:inherit;
+  color:#665570;
+
   font-size:14px;
   font-weight:700;
 
   cursor:pointer;
+
+  transition:.2s ease;
 }
 
-/* =========================
-   HIDE
-   ========================= */
+.quiz4142-restart:active{
+  transform:scale(.98);
+}
+
+
+/* =====================================================
+   HIDDEN
+   ===================================================== */
 
 .quiz4142-hidden{
   display:none !important;
 }
 
-/* =========================
-   DESKTOP
-   ========================= */
 
-@media(min-width:700px){
+/* =====================================================
+   TABLET / DESKTOP
+   ===================================================== */
+
+@media(min-width:650px){
 
   .quiz4142{
     max-width:680px;
-    padding:30px 20px 50px;
+    padding:25px 20px 50px;
   }
 
   .quiz4142-hero{
-    padding:28px;
+    padding:27px;
   }
 
   .quiz4142-hero h2{
-    font-size:28px;
+    font-size:27px;
   }
 
   .quiz4142-card{
-    padding:26px;
+    padding:24px;
   }
 
   .quiz4142-options{
@@ -773,27 +873,28 @@
   }
 
   .quiz4142-question{
-    padding:30px;
+    padding:32px 20px;
   }
 
   .quiz4142-question-text{
-    font-size:34px;
+    font-size:36px;
   }
+
 }
 
-/* =========================
+
+/* =====================================================
    SMALL PHONE
-   ========================= */
+   ===================================================== */
 
 @media(max-width:380px){
 
   .quiz4142{
-    padding:14px 10px 35px;
+    padding:12px 9px 30px;
   }
 
   .quiz4142-hero{
     padding:19px 12px;
-    border-radius:20px;
   }
 
   .quiz4142-hero h2{
@@ -801,12 +902,15 @@
   }
 
   .quiz4142-card{
-    padding:15px 12px;
-    border-radius:19px;
+    padding:14px;
+  }
+
+  .quiz4142-question{
+    padding:22px 11px;
   }
 
   .quiz4142-question-text{
-    font-size:25px;
+    font-size:27px;
   }
 
   .quiz4142-question-text.indonesia{
@@ -814,13 +918,39 @@
   }
 
   .quiz4142-option{
-    min-height:51px;
-    font-size:14px;
-    padding:10px 11px;
-  }
-}
-</style>
+    min-height:50px;
 
+    font-size:13px;
+
+    padding:9px 10px;
+  }
+
+  .quiz4142-option-letter{
+    width:25px;
+    height:25px;
+
+    margin-right:8px;
+  }
+
+}
+
+
+/* =====================================================
+   REDUCE MOTION
+   ===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+  .quiz4142 *,
+  .quiz4142 *::before,
+  .quiz4142 *::after{
+    transition:none !important;
+    animation:none !important;
+  }
+
+}
+
+</style>
 <!-- =========================================================
      DATABASE + JAVASCRIPT
 ========================================================= -->
