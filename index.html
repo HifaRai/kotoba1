@@ -1,6 +1,13 @@
-<!-- =====================================================
+<!-- =========================================================
      QUIZ KANJI BAB 41–42
-===================================================== -->
+     MINNA NO NIHONGO II
+     HTML + CSS + DATABASE + JAVASCRIPT
+========================================================= -->
+
+
+<!-- =========================================================
+     HTML
+========================================================= -->
 
 <section id="quiz4142" class="page">
 
@@ -22,9 +29,9 @@
     </div>
 
 
-    <!-- ==============================
+    <!-- =====================================================
          SETTING QUIZ
-    =============================== -->
+    ===================================================== -->
 
     <div id="quiz4142Setup" class="quiz4142-setup">
 
@@ -75,7 +82,6 @@
 
           <option value="mixed">
             Campur
-
           </option>
 
         </select>
@@ -119,7 +125,7 @@
       <button
         id="quiz4142StartButton"
         class="quiz4142-button quiz4142-start"
-        onclick="startQuiz4142()"
+        type="button"
       >
         Mulai Quiz
       </button>
@@ -127,9 +133,9 @@
     </div>
 
 
-    <!-- ==============================
+    <!-- =====================================================
          QUIZ GAME
-    =============================== -->
+    ===================================================== -->
 
     <div
       id="quiz4142Game"
@@ -210,7 +216,7 @@
       <button
         id="quiz4142Next"
         class="quiz4142-button quiz4142-next"
-        onclick="nextQuiz4142()"
+        type="button"
         style="display:none;"
       >
         Soal Berikutnya →
@@ -219,9 +225,9 @@
     </div>
 
 
-    <!-- ==============================
+    <!-- =====================================================
          RESULT
-    =============================== -->
+    ===================================================== -->
 
     <div
       id="quiz4142Result"
@@ -251,8 +257,9 @@
 
 
       <button
+        id="quiz4142Restart"
         class="quiz4142-button"
-        onclick="restartQuiz4142()"
+        type="button"
       >
         Ulangi Quiz
       </button>
@@ -264,32 +271,38 @@
 </section>
 
 
+
+<!-- =========================================================
+     CSS
+========================================================= -->
+
+<style>
+
 /* =====================================================
-   QUIZ KANJI BAB 41–42
+   MAIN
 ===================================================== */
 
-#quiz4142{
-  padding-bottom:50px;
+#quiz4142 {
+  padding-bottom: 50px;
 }
 
+.quiz4142-container {
 
-.quiz4142-container{
+  max-width: 650px;
 
-  max-width:650px;
+  margin: 30px auto;
 
-  margin:30px auto;
+  padding: 25px;
 
-  padding:25px;
+  background: rgba(255,255,255,.78);
 
-  background:rgba(255,255,255,.78);
-
-  border-radius:28px;
+  border-radius: 28px;
 
   box-shadow:
     0 12px 35px
     rgba(100,80,120,.08);
 
-  box-sizing:border-box;
+  box-sizing: border-box;
 
 }
 
@@ -298,58 +311,55 @@
    HEADER
 ===================================================== */
 
-.quiz4142-header{
+.quiz4142-header {
 
-  text-align:center;
+  text-align: center;
 
-  margin-bottom:30px;
-
-}
-
-
-.quiz4142-badge{
-
-  width:70px;
-
-  height:70px;
-
-  margin:0 auto 15px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  border-radius:20px;
-
-  background:#eee8f7;
-
-  color:#655477;
-
-  font-size:34px;
-
-  font-weight:800;
+  margin-bottom: 30px;
 
 }
 
+.quiz4142-badge {
 
-.quiz4142-header h2{
+  width: 70px;
 
-  margin:0;
+  height: 70px;
 
-  font-size:26px;
+  margin: 0 auto 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #eee8f7;
+
+  color: #655477;
+
+  font-size: 34px;
+
+  font-weight: 800;
 
 }
 
+.quiz4142-header h2 {
 
-.quiz4142-header p{
+  margin: 0;
 
-  margin-top:7px;
+  font-size: 26px;
 
-  color:#999;
+}
 
-  font-size:14px;
+.quiz4142-header p {
+
+  margin-top: 7px;
+
+  color: #999;
+
+  font-size: 14px;
 
 }
 
@@ -358,56 +368,53 @@
    SETTING
 ===================================================== */
 
-.quiz4142-setting{
+.quiz4142-setting {
 
-  margin-bottom:18px;
-
-}
-
-
-.quiz4142-setting label{
-
-  display:block;
-
-  margin-bottom:8px;
-
-  font-size:14px;
-
-  font-weight:600;
-
-  color:#655b70;
+  margin-bottom: 18px;
 
 }
 
+.quiz4142-setting label {
 
-.quiz4142-setting select{
+  display: block;
 
-  width:100%;
+  margin-bottom: 8px;
 
-  padding:13px 15px;
+  font-size: 14px;
 
-  border:1px solid #ddd;
+  font-weight: 600;
 
-  border-radius:14px;
-
-  background:#fff;
-
-  color:#444;
-
-  font-size:15px;
-
-  outline:none;
-
-  box-sizing:border-box;
-
-  cursor:pointer;
+  color: #655b70;
 
 }
 
+.quiz4142-setting select {
 
-.quiz4142-setting select:focus{
+  width: 100%;
 
-  border-color:#bda8d0;
+  padding: 13px 15px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 14px;
+
+  background: #fff;
+
+  color: #444;
+
+  font-size: 15px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+}
+
+.quiz4142-setting select:focus {
+
+  border-color: #bda8d0;
 
   box-shadow:
     0 0 0 3px
@@ -420,41 +427,45 @@
    BUTTON
 ===================================================== */
 
-.quiz4142-button{
+.quiz4142-button {
 
-  border:none;
+  border: none;
 
-  padding:13px 20px;
+  padding: 13px 20px;
 
-  border-radius:15px;
+  border-radius: 15px;
 
-  background:#c9b6e4;
+  background: #c9b6e4;
 
-  color:#4d405c;
+  color: #4d405c;
 
-  font-size:15px;
+  font-size: 15px;
 
-  font-weight:700;
+  font-weight: 700;
 
-  cursor:pointer;
+  cursor: pointer;
 
-  transition:.2s;
-
-}
-
-
-.quiz4142-button:hover{
-
-  transform:translateY(-2px);
+  transition: .2s;
 
 }
 
+.quiz4142-button:hover {
 
-.quiz4142-start{
+  transform: translateY(-2px);
 
-  width:100%;
+}
 
-  margin-top:5px;
+.quiz4142-button:active {
+
+  transform: translateY(0);
+
+}
+
+.quiz4142-start {
+
+  width: 100%;
+
+  margin-top: 5px;
 
 }
 
@@ -463,21 +474,21 @@
    TOP
 ===================================================== */
 
-.quiz4142-top{
+.quiz4142-top {
 
-  display:flex;
+  display: flex;
 
-  justify-content:space-between;
+  justify-content: space-between;
 
-  align-items:center;
+  align-items: center;
 
-  margin-bottom:10px;
+  margin-bottom: 10px;
 
-  font-size:14px;
+  font-size: 14px;
 
-  font-weight:700;
+  font-weight: 700;
 
-  color:#655b70;
+  color: #655b70;
 
 }
 
@@ -486,32 +497,31 @@
    PROGRESS
 ===================================================== */
 
-.quiz4142-progress{
+.quiz4142-progress {
 
-  width:100%;
+  width: 100%;
 
-  height:8px;
+  height: 8px;
 
-  background:#eee;
+  background: #eee;
 
-  border-radius:20px;
+  border-radius: 20px;
 
-  overflow:hidden;
+  overflow: hidden;
 
-  margin-bottom:35px;
+  margin-bottom: 35px;
 
 }
 
+#quiz4142ProgressBar {
 
-#quiz4142ProgressBar{
+  width: 0%;
 
-  width:0%;
+  height: 100%;
 
-  height:100%;
+  background: #bba4d7;
 
-  background:#bba4d7;
-
-  transition:.3s;
+  transition: width .3s;
 
 }
 
@@ -520,62 +530,61 @@
    QUESTION
 ===================================================== */
 
-.quiz4142-question{
+.quiz4142-question {
 
-  text-align:center;
+  text-align: center;
 
-  margin-bottom:30px;
-
-}
-
-
-.quiz4142-direction{
-
-  display:inline-block;
-
-  padding:7px 13px;
-
-  border-radius:20px;
-
-  background:#f0ebf5;
-
-  color:#887b92;
-
-  font-size:12px;
-
-  font-weight:600;
-
-  margin-bottom:18px;
+  margin-bottom: 30px;
 
 }
 
+.quiz4142-direction {
 
-.quiz4142-question-text{
+  display: inline-block;
 
-  min-height:55px;
+  padding: 7px 13px;
 
-  display:flex;
+  border-radius: 20px;
 
-  align-items:center;
+  background: #f0ebf5;
 
-  justify-content:center;
+  color: #887b92;
 
-  font-size:34px;
+  font-size: 12px;
 
-  font-weight:800;
+  font-weight: 600;
 
-  line-height:1.4;
+  margin-bottom: 18px;
 
 }
 
+.quiz4142-question-text {
 
-.quiz4142-reading{
+  min-height: 55px;
 
-  margin-top:8px;
+  display: flex;
 
-  color:#999;
+  align-items: center;
 
-  font-size:15px;
+  justify-content: center;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  line-height: 1.4;
+
+  word-break: break-word;
+
+}
+
+.quiz4142-reading {
+
+  margin-top: 8px;
+
+  color: #999;
+
+  font-size: 15px;
 
 }
 
@@ -584,79 +593,76 @@
    ANSWERS
 ===================================================== */
 
-.quiz4142-answers{
+.quiz4142-answers {
 
-  display:grid;
+  display: grid;
 
   grid-template-columns:
-    repeat(2,1fr);
+    repeat(2, 1fr);
 
-  gap:12px;
-
-}
-
-
-.quiz4142-answer{
-
-  min-height:70px;
-
-  padding:15px;
-
-  border:1px solid #e7e2ea;
-
-  border-radius:17px;
-
-  background:#faf8fb;
-
-  color:#4b4450;
-
-  font-size:15px;
-
-  font-weight:600;
-
-  cursor:pointer;
-
-  transition:.2s;
+  gap: 12px;
 
 }
 
+.quiz4142-answer {
 
-.quiz4142-answer:hover{
+  min-height: 70px;
 
-  transform:translateY(-2px);
+  padding: 15px;
 
-  background:#f4eff7;
+  border: 1px solid #e7e2ea;
 
-}
+  border-radius: 17px;
 
+  background: #faf8fb;
 
-.quiz4142-answer:disabled{
+  color: #4b4450;
 
-  cursor:default;
+  font-size: 15px;
 
-  transform:none;
+  font-weight: 600;
 
-}
+  cursor: pointer;
 
+  transition: .2s;
 
-.quiz4142-answer.correct{
-
-  background:#dcefe1;
-
-  border-color:#b9d8c0;
-
-  color:#4f7058;
+  box-sizing: border-box;
 
 }
 
+.quiz4142-answer:hover:not(:disabled) {
 
-.quiz4142-answer.wrong{
+  transform: translateY(-2px);
 
-  background:#f4dada;
+  background: #f4eff7;
 
-  border-color:#dfb5b5;
+}
 
-  color:#985b5b;
+.quiz4142-answer:disabled {
+
+  cursor: default;
+
+  transform: none;
+
+}
+
+.quiz4142-answer.correct {
+
+  background: #dcefe1;
+
+  border-color: #b9d8c0;
+
+  color: #4f7058;
+
+}
+
+.quiz4142-answer.wrong {
+
+  background: #f4dada;
+
+  border-color: #dfb5b5;
+
+  color: #985b5b;
 
 }
 
@@ -665,31 +671,29 @@
    FEEDBACK
 ===================================================== */
 
-.quiz4142-feedback{
+.quiz4142-feedback {
 
-  min-height:25px;
+  min-height: 25px;
 
-  margin:20px 0;
+  margin: 20px 0;
 
-  text-align:center;
+  text-align: center;
 
-  font-size:14px;
+  font-size: 14px;
 
-  font-weight:700;
-
-}
-
-
-.quiz4142-feedback.correct{
-
-  color:#52745c;
+  font-weight: 700;
 
 }
 
+.quiz4142-feedback.correct {
 
-.quiz4142-feedback.wrong{
+  color: #52745c;
 
-  color:#a45c5c;
+}
+
+.quiz4142-feedback.wrong {
+
+  color: #a45c5c;
 
 }
 
@@ -698,9 +702,9 @@
    NEXT
 ===================================================== */
 
-.quiz4142-next{
+.quiz4142-next {
 
-  width:100%;
+  width: 100%;
 
 }
 
@@ -709,49 +713,45 @@
    RESULT
 ===================================================== */
 
-.quiz4142-result{
+.quiz4142-result {
 
-  text-align:center;
+  text-align: center;
 
-  padding:25px 10px;
-
-}
-
-
-.quiz4142-result-icon{
-
-  font-size:45px;
-
-  margin-bottom:10px;
+  padding: 25px 10px;
 
 }
 
+.quiz4142-result-icon {
 
-.quiz4142-result h2{
+  font-size: 45px;
 
-  margin:0;
-
-}
-
-
-.quiz4142-final-score{
-
-  margin:20px 0 5px;
-
-  font-size:48px;
-
-  font-weight:800;
-
-  color:#665477;
+  margin-bottom: 10px;
 
 }
 
+.quiz4142-result h2 {
 
-.quiz4142-final-text{
+  margin: 0;
 
-  color:#999;
+}
 
-  margin-bottom:25px;
+.quiz4142-final-score {
+
+  margin: 20px 0 5px;
+
+  font-size: 48px;
+
+  font-weight: 800;
+
+  color: #665477;
+
+}
+
+.quiz4142-final-text {
+
+  color: #999;
+
+  margin-bottom: 25px;
 
 }
 
@@ -760,48 +760,57 @@
    MOBILE
 ===================================================== */
 
-@media(max-width:600px){
+@media(max-width:600px) {
 
-  .quiz4142-container{
+  .quiz4142-container {
 
-    margin:20px 10px;
+    margin: 20px 10px;
 
-    padding:20px 15px;
+    padding: 20px 15px;
 
-    border-radius:22px;
-
-  }
-
-
-  .quiz4142-question-text{
-
-    font-size:30px;
+    border-radius: 22px;
 
   }
 
+  .quiz4142-question-text {
 
-  .quiz4142-answers{
-
-    grid-template-columns:1fr;
+    font-size: 30px;
 
   }
 
+  .quiz4142-answers {
 
-  .quiz4142-answer{
+    grid-template-columns: 1fr;
 
-    min-height:60px;
+  }
+
+  .quiz4142-answer {
+
+    min-height: 60px;
 
   }
 
 }
 
+</style>
+
+
+
+<!-- =========================================================
+     DATABASE + JAVASCRIPT
+========================================================= -->
+
+<script>
+
 /* =====================================================
    DATABASE KANJI QUIZ
    MINNA NO NIHONGO II
    BAB 41–42
+
+   DATABASE TETAP SAMA SEPERTI VERSI AWAL
 ===================================================== */
 
-const kanjiQuiz4142 = {
+const quiz4142Data = {
 
   /* ===================================================
      BAB 41
@@ -1248,10 +1257,9 @@ const kanjiQuiz4142 = {
 
 };
 
+
 /* =====================================================
-
    QUIZ STATE
-
 ===================================================== */
 
 let quiz4142Questions = [];
@@ -1262,301 +1270,237 @@ let quiz4142Score = 0;
 
 let quiz4142Answered = false;
 
+
 /* =====================================================
-
    SHUFFLE
-
 ===================================================== */
 
-function shuffleQuiz4142(array){
+function quiz4142Shuffle(array) {
 
   const result = [...array];
 
-  for(
-
+  for (
     let i = result.length - 1;
-
     i > 0;
-
     i--
-
-  ){
+  ) {
 
     const j =
-
       Math.floor(
-
         Math.random() * (i + 1)
-
       );
 
     [
-
       result[i],
-
       result[j]
-
     ] = [
-
       result[j],
-
       result[i]
-
     ];
 
   }
 
   return result;
-
 }
 
+
 /* =====================================================
-
-   AMBIL DATABASE SESUAI BAB
-
+   GET DATABASE SESUAI BAB
 ===================================================== */
 
-function getQuiz4142Data(){
+function quiz4142GetData() {
 
   const chapter =
-
     document.getElementById(
-
       "quiz4142Chapter"
-
     ).value;
 
-  if(chapter === "all"){
+
+  if (chapter === "all") {
 
     return [
-
-      ...kanjiQuiz4142[41],
-
-      ...kanjiQuiz4142[42]
-
+      ...quiz4142Data[41],
+      ...quiz4142Data[42]
     ];
 
   }
 
+
   return [
-
-    ...kanjiQuiz4142[chapter]
-
+    ...quiz4142Data[chapter]
   ];
 
 }
 
+
 /* =====================================================
-
-   BUAT PILIHAN JAWABAN
-
+   CREATE OPTIONS
 ===================================================== */
 
-function createQuiz4142Options(
-
+function quiz4142CreateOptions(
   correct,
-
   data,
-
   mode
+) {
 
-){
-
-  let options = [correct];
+  const options = [correct];
 
   const shuffled =
+    quiz4142Shuffle(data);
 
-    shuffleQuiz4142(data);
 
-  for(const item of shuffled){
+  for (const item of shuffled) {
 
     let value;
 
-    if(mode === "jp-id"){
 
-      value =
+    if (mode === "jp-id") {
 
-        item.meaning;
+      value = item.meaning;
 
-    }else{
+    } else {
 
-      value =
-
-        item.word;
+      value = item.word;
 
     }
 
-    if(
 
+    if (
       value !== correct &&
-
       !options.includes(value)
-
-    ){
+    ) {
 
       options.push(value);
 
     }
 
-    if(options.length >= 4){
 
+    if (options.length >= 4) {
       break;
-
     }
 
   }
 
-  return shuffleQuiz4142(
 
-    options
-
-  );
+  return quiz4142Shuffle(options);
 
 }
 
+
 /* =====================================================
-
-   MEMBUAT SOAL
-
+   GENERATE QUIZ
 ===================================================== */
 
-function generateQuiz4142(){
+function quiz4142Generate() {
 
   const data =
+    quiz4142GetData();
 
-    getQuiz4142Data();
 
   const selectedMode =
-
     document.getElementById(
-
       "quiz4142Mode"
-
     ).value;
 
+
   let questionCount =
-
     Number(
-
       document.getElementById(
-
         "quiz4142Count"
-
       ).value
-
     );
+
 
   questionCount =
-
     Math.min(
-
       questionCount,
-
       data.length
-
     );
 
+
   const selectedQuestions =
-
-    shuffleQuiz4142(data)
-
+    quiz4142Shuffle(data)
       .slice(
-
         0,
-
         questionCount
-
       );
 
-  quiz4142Questions =
 
+  quiz4142Questions =
     selectedQuestions.map(item => {
 
       let mode =
-
         selectedMode;
 
+
       /* ==========================
-
          MODE CAMPUR
-
       ========================== */
 
-      if(mode === "mixed"){
+      if (mode === "mixed") {
 
         mode =
-
           Math.random() < 0.5
-
             ? "jp-id"
-
             : "id-jp";
 
       }
+
 
       let question;
 
       let correct;
 
-      /* ==========================
 
+      /* ==========================
          KANJI → INDONESIA
-
       ========================== */
 
-      if(mode === "jp-id"){
+      if (mode === "jp-id") {
 
         question =
-
           item.word;
 
         correct =
-
           item.meaning;
 
       }
+
 
       /* ==========================
-
          INDONESIA → KANJI
-
       ========================== */
 
-      else{
+      else {
 
         question =
-
           item.meaning;
 
         correct =
-
           item.word;
 
       }
+
 
       const options =
-
-        createQuiz4142Options(
-
+        quiz4142CreateOptions(
           correct,
-
           data,
-
           mode
-
         );
+
 
       return {
 
-        item:item,
+        item: item,
 
-        mode:mode,
+        mode: mode,
 
-        question:question,
+        question: question,
 
-        correct:correct,
+        correct: correct,
 
-        options:options
+        options: options
 
       };
 
@@ -1564,15 +1508,15 @@ function generateQuiz4142(){
 
 }
 
+
 /* =====================================================
-
    START QUIZ
-
 ===================================================== */
 
-function startQuiz4142(){
+function quiz4142Start() {
 
-  generateQuiz4142();
+  quiz4142Generate();
+
 
   quiz4142Index = 0;
 
@@ -1580,549 +1524,435 @@ function startQuiz4142(){
 
   quiz4142Answered = false;
 
+
   document.getElementById(
-
     "quiz4142Setup"
-
   ).style.display = "none";
 
+
   document.getElementById(
-
     "quiz4142Game"
-
   ).style.display = "block";
 
+
   document.getElementById(
-
     "quiz4142Result"
-
   ).style.display = "none";
 
-  showQuiz4142Question();
+
+  quiz4142ShowQuestion();
 
 }
 
+
 /* =====================================================
-
-   TAMPILKAN SOAL
-
+   SHOW QUESTION
 ===================================================== */
 
-function showQuiz4142Question(){
+function quiz4142ShowQuestion() {
 
   const current =
-
     quiz4142Questions[
-
       quiz4142Index
-
     ];
 
-  if(!current){
 
-    finishQuiz4142();
+  if (!current) {
+
+    quiz4142Finish();
 
     return;
 
   }
 
+
   quiz4142Answered = false;
 
+
   /* ==========================
-
      PROGRESS
-
   ========================== */
 
   document.getElementById(
-
     "quiz4142Progress"
-
   ).textContent =
-
     `${quiz4142Index + 1} / ${quiz4142Questions.length}`;
 
+
   document.getElementById(
-
     "quiz4142Score"
-
   ).textContent =
-
     `Skor: ${quiz4142Score}`;
 
+
   const progress =
-
     (
-
       quiz4142Index /
-
       quiz4142Questions.length
-
     ) * 100;
 
+
   document.getElementById(
-
     "quiz4142ProgressBar"
-
   ).style.width =
-
     `${progress}%`;
 
+
   /* ==========================
-
-     ARAH SOAL
-
+     DIRECTION
   ========================== */
 
   document.getElementById(
-
     "quiz4142Direction"
-
   ).textContent =
-
     current.mode === "jp-id"
-
       ? "Kanji → Indonesia"
-
       : "Indonesia → Kanji";
 
+
   /* ==========================
-
-     PERTANYAAN
-
+     QUESTION
   ========================== */
 
   document.getElementById(
-
     "quiz4142Question"
-
   ).textContent =
-
     current.question;
 
+
   /* ==========================
-
      READING
-
   ========================== */
 
-  const reading =
-
-    document.getElementById(
-
-      "quiz4142Reading"
-
-    );
-
   /*
-
-   * Jangan tampilkan reading
-
-   * pada mode Kanji → Indonesia,
-
-   * karena reading akan memberi clue.
-
+   * Reading sengaja tidak ditampilkan.
+   *
+   * Pada Kanji → Indonesia,
+   * reading akan menjadi clue.
    */
 
-  if(current.mode === "jp-id"){
+  document.getElementById(
+    "quiz4142Reading"
+  ).textContent = "";
 
-    reading.textContent = "";
-
-  }else{
-
-    reading.textContent = "";
-
-  }
 
   /* ==========================
-
-     PILIHAN
-
+     ANSWERS
   ========================== */
 
   const answers =
-
     document.getElementById(
-
       "quiz4142Answers"
-
     );
+
 
   answers.innerHTML = "";
 
-  current.options.forEach(
 
+  current.options.forEach(
     option => {
 
       const button =
-
         document.createElement(
-
           "button"
-
         );
 
-      button.className =
 
+      button.type = "button";
+
+
+      button.className =
         "quiz4142-answer";
 
-      button.textContent =
 
+      button.textContent =
         option;
 
-      button.onclick =
 
-        function(){
+      button.addEventListener(
+        "click",
+        function() {
 
-          answerQuiz4142(
-
+          quiz4142Answer(
             button,
-
             option
-
           );
 
-        };
+        }
+      );
+
 
       answers.appendChild(
-
         button
-
       );
 
     }
-
   );
 
+
   /* ==========================
-
      RESET FEEDBACK
-
   ========================== */
 
   const feedback =
-
     document.getElementById(
-
       "quiz4142Feedback"
-
     );
+
 
   feedback.textContent = "";
 
-  feedback.className =
 
+  feedback.className =
     "quiz4142-feedback";
 
+
   /* ==========================
-
      HIDE NEXT
-
   ========================== */
 
   document.getElementById(
-
     "quiz4142Next"
-
   ).style.display =
-
     "none";
 
 }
 
+
 /* =====================================================
-
-   JAWAB SOAL
-
+   ANSWER
 ===================================================== */
 
-function answerQuiz4142(
-
+function quiz4142Answer(
   selectedButton,
-
   selectedAnswer
+) {
 
-){
-
-  if(quiz4142Answered){
-
+  if (quiz4142Answered) {
     return;
-
   }
+
 
   quiz4142Answered = true;
 
+
   const current =
-
     quiz4142Questions[
-
       quiz4142Index
-
     ];
 
-  const buttons =
-
-    document.querySelectorAll(
-
-      "#quiz4142Answers .quiz4142-answer"
-
-    );
 
   /* ==========================
-
-     DISABLE SEMUA
-
+     DISABLE ALL BUTTONS
   ========================== */
 
-  buttons.forEach(
+  const buttons =
+    document.querySelectorAll(
+      "#quiz4142Answers .quiz4142-answer"
+    );
 
+
+  buttons.forEach(
     button => {
 
       button.disabled = true;
 
-      if(
 
+      if (
         button.textContent ===
-
         current.correct
-
-      ){
+      ) {
 
         button.classList.add(
-
           "correct"
-
         );
 
       }
 
     }
-
   );
 
+
   const feedback =
-
     document.getElementById(
-
       "quiz4142Feedback"
-
     );
 
+
   /* ==========================
-
      BENAR
-
   ========================== */
 
-  if(
-
+  if (
     selectedAnswer ===
-
     current.correct
-
-  ){
+  ) {
 
     quiz4142Score++;
 
+
     selectedButton.classList.add(
-
       "correct"
-
     );
 
-    feedback.textContent =
 
+    feedback.textContent =
       "✓ Benar!";
 
+
     feedback.classList.add(
-
       "correct"
-
     );
 
   }
 
+
   /* ==========================
-
      SALAH
-
   ========================== */
 
-  else{
+  else {
 
     selectedButton.classList.add(
-
       "wrong"
-
     );
 
-    feedback.textContent =
 
+    feedback.textContent =
       `Jawaban yang benar: ${current.correct}`;
 
+
     feedback.classList.add(
-
       "wrong"
-
     );
 
   }
 
-  document.getElementById(
-
-    "quiz4142Score"
-
-  ).textContent =
-
-    `Skor: ${quiz4142Score}`;
 
   /* ==========================
-
-     SHOW NEXT
-
+     UPDATE SCORE
   ========================== */
 
   document.getElementById(
+    "quiz4142Score"
+  ).textContent =
+    `Skor: ${quiz4142Score}`;
 
+
+  /* ==========================
+     SHOW NEXT
+  ========================== */
+
+  document.getElementById(
     "quiz4142Next"
-
   ).style.display =
-
     "block";
 
 }
 
+
 /* =====================================================
-
-   NEXT
-
+   NEXT QUESTION
 ===================================================== */
 
-function nextQuiz4142(){
+function quiz4142NextQuestion() {
 
   quiz4142Index++;
 
-  if(
 
+  if (
     quiz4142Index >=
-
     quiz4142Questions.length
+  ) {
 
-  ){
-
-    finishQuiz4142();
+    quiz4142Finish();
 
     return;
 
   }
 
-  showQuiz4142Question();
+
+  quiz4142ShowQuestion();
 
 }
 
+
 /* =====================================================
-
    FINISH
-
 ===================================================== */
 
-function finishQuiz4142(){
+function quiz4142Finish() {
 
   document.getElementById(
-
     "quiz4142Game"
-
   ).style.display =
-
     "none";
 
+
   document.getElementById(
-
     "quiz4142Result"
-
   ).style.display =
-
     "block";
 
-  const total =
 
+  const total =
     quiz4142Questions.length;
 
+
   const percentage =
-
     total > 0
-
       ? Math.round(
-
           (
-
             quiz4142Score /
-
             total
-
           ) * 100
-
         )
-
       : 0;
 
+
   document.getElementById(
-
     "quiz4142ProgressBar"
-
   ).style.width =
-
     "100%";
 
+
   document.getElementById(
-
     "quiz4142FinalScore"
-
   ).textContent =
-
     `${quiz4142Score} / ${total}`;
 
+
   document.getElementById(
-
     "quiz4142FinalText"
-
   ).textContent =
-
     `${percentage}% benar`;
 
 }
 
+
 /* =====================================================
-
    RESTART
-
 ===================================================== */
 
-function restartQuiz4142(){
+function quiz4142Restart() {
 
   document.getElementById(
-
     "quiz4142Result"
-
   ).style.display =
-
     "none";
 
-  document.getElementById(
 
+  document.getElementById(
     "quiz4142Game"
-
   ).style.display =
-
     "none";
 
+
   document.getElementById(
-
     "quiz4142Setup"
-
   ).style.display =
-
     "block";
+
 
   quiz4142Questions = [];
 
@@ -2133,3 +1963,71 @@ function restartQuiz4142(){
   quiz4142Answered = false;
 
 }
+
+
+/* =====================================================
+   EVENT LISTENER
+===================================================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function() {
+
+
+    const startButton =
+      document.getElementById(
+        "quiz4142StartButton"
+      );
+
+
+    const nextButton =
+      document.getElementById(
+        "quiz4142Next"
+      );
+
+
+    const restartButton =
+      document.getElementById(
+        "quiz4142Restart"
+      );
+
+
+    /* START */
+
+    if (startButton) {
+
+      startButton.addEventListener(
+        "click",
+        quiz4142Start
+      );
+
+    }
+
+
+    /* NEXT */
+
+    if (nextButton) {
+
+      nextButton.addEventListener(
+        "click",
+        quiz4142NextQuestion
+      );
+
+    }
+
+
+    /* RESTART */
+
+    if (restartButton) {
+
+      restartButton.addEventListener(
+        "click",
+        quiz4142Restart
+      );
+
+    }
+
+  }
+);
+
+</script>
